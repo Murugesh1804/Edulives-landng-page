@@ -101,8 +101,15 @@ export default function HomePage() {
       <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
-              <BookOpen className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+              <Image
+              src="/images/logo.jpg"
+              alt="EduLives Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8 object-contain"
+              priority
+              />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
               EduLives
@@ -220,7 +227,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative z-10">
                 <img
-                  src="/home.png"
+                  src="/images/home.png"
                   alt="EduLives Dashboard Preview"
                   width={800}
                   height={600}
@@ -248,11 +255,11 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <VideoPlayer
-              thumbnail="/placeholder.svg?height=300&width=500"
+              thumbnail="https://i.pinimg.com/1200x/0c/3b/99/0c3b9949fc24650a3eec3b3f9d133b17.jpg"
               title="Complete School Management Demo - 5 min overview"
             />
             <VideoPlayer
-              thumbnail="/placeholder.svg?height=300&width=500"
+              thumbnail="https://i.pinimg.com/1200x/97/6b/36/976b36b985ab127caac798f368d8d085.jpg"
               title="Parent & Student Mobile App Tour - 3 min"
             />
           </div>
@@ -294,7 +301,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="https://i.pinimg.com/736x/a1/4b/db/a14bdb9c0d07c93a865c1d052ad31bd2.jpg"
                     alt="School Automation"
                     width={300}
                     height={200}
@@ -315,7 +322,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="https://i.pinimg.com/736x/4d/0f/1c/4d0f1c429812c04c31e20de07878b25f.jpg"
                     alt="Fast Performance"
                     width={300}
                     height={200}
@@ -336,7 +343,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="https://i.pinimg.com/736x/e2/19/16/e2191675372d855ffd12addb695946b6.jpg"
                     alt="Expert Support"
                     width={300}
                     height={200}
@@ -475,7 +482,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
                   <Image
-                    src={features[activeFeature].image || "/placeholder.svg"}
+                    src= "/images/study.jpg"
                     alt={features[activeFeature].title}
                     width={600}
                     height={400}
@@ -517,10 +524,10 @@ export default function HomePage() {
                 <div className="flex items-start space-x-4 group">
                   <div className="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-200 transition-colors">
                     <Image
-                      src="/placeholder.svg?height=32&width=32"
+                      src="https://i.pinimg.com/736x/75/67/10/756710914cf400b0a7b32a5501517cd6.jpg"
                       alt="Mobile Apps"
-                      width={32}
-                      height={32}
+                      width={10}
+                      height={10}
                       className="w-8 h-8"
                     />
                   </div>
@@ -533,7 +540,7 @@ export default function HomePage() {
                 <div className="flex items-start space-x-4 group">
                   <div className="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-200 transition-colors">
                     <Image
-                      src="/placeholder.svg?height=32&width=32"
+                      src="https://i.pinimg.com/1200x/c2/e0/6d/c2e06ddd8bd5a6b7297d6c7b4f3eb68c.jpg"
                       alt="Notifications"
                       width={32}
                       height={32}
@@ -549,7 +556,7 @@ export default function HomePage() {
                 <div className="flex items-start space-x-4 group">
                   <div className="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-200 transition-colors">
                     <Image
-                      src="/placeholder.svg?height=32&width=32"
+                      src="https://i.pinimg.com/736x/3a/88/5d/3a885da9fb9c1d77309228ccfaf13858.jpg"
                       alt="Offline"
                       width={32}
                       height={32}
@@ -562,11 +569,11 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-
+{/* 
               <div className="flex space-x-4">
                 <div className="transform hover:scale-105 transition-transform duration-200">
                   <Image
-                    src="/placeholder.svg?height=60&width=180"
+                    src=""
                     alt="Download on App Store"
                     width={180}
                     height={60}
@@ -582,13 +589,13 @@ export default function HomePage() {
                     className="rounded-lg shadow-md hover:shadow-lg transition-shadow"
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="relative">
               <div className="relative z-10">
                 <Image
-                  src="/placeholder.svg?height=600&width=400"
+                  src="https://i.pinimg.com/736x/75/67/10/756710914cf400b0a7b32a5501517cd6.jpg"
                   alt="EduLives Mobile App"
                   width={400}
                   height={600}
@@ -602,7 +609,7 @@ export default function HomePage() {
       </section>
 
       {/* Integrations with Real Logos */}
-      <section className="py-20 bg-gray-50 relative">
+      {/* <section className="py-20 bg-gray-50 relative">
         <div className="absolute inset-0 opacity-5">
           <Image
             src="/placeholder.svg?height=600&width=1200"
@@ -657,7 +664,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials with Real Photos */}
       <section id="testimonials" className="py-20 bg-white relative">
@@ -756,13 +763,13 @@ export default function HomePage() {
       {/* CTA Section with Background */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600">
-          <Image
-            src="/placeholder.svg?height=400&width=1200"
+          {/* <Image
+            src=""
             alt="CTA Background"
             width={1200}
             height={400}
             className="w-full h-full object-cover opacity-20"
-          />
+          /> */}
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -812,7 +819,14 @@ export default function HomePage() {
             <div>
               <div className="flex items-center space-x-2 mb-6">
                 <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
-                  <BookOpen className="w-5 h-5 text-white" />
+                 <Image
+                  src="/images/logo.jpg"
+                  alt="EduLives Logo"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 object-contain"
+                  priority
+                  />
                 </div>
                 <span className="text-2xl font-bold">EduLives</span>
               </div>
