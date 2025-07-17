@@ -219,11 +219,12 @@ export default function HomePage() {
 
             <div className="relative">
               <div className="relative z-10">
-                <Image
-                  src="/placeholder.svg?height=600&width=800"
+                <img
+                  src="/home.png"
                   alt="EduLives Dashboard Preview"
                   width={800}
                   height={600}
+                 
                   className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
                 />
               </div>
