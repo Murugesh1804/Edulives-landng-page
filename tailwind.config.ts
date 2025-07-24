@@ -1,10 +1,10 @@
 import type { Config } from "tailwindcss"
-import defaultConfig from "shadcn/ui/tailwind.config"
+import defaultConfig from "tailwindcss/defaultConfig"
+import animate from "tailwindcss-animate"
 
 const config: Config = {
   ...defaultConfig,
   content: [
-    ...defaultConfig.content,
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,7 +13,7 @@ const config: Config = {
   theme: {
     ...defaultConfig.theme,
     extend: {
-      ...defaultConfig.theme.extend,
+      ...defaultConfig.theme?.extend,
       fontFamily: {
         poppins: ["var(--font-poppins)", "sans-serif"],
       },
@@ -74,7 +74,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [...defaultConfig.plugins, require("tailwindcss-animate")],
+  plugins: [animate],
 }
 
 export default config
