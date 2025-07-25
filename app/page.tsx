@@ -44,22 +44,47 @@ export default function EduLivesLanding() {
     },
   ]
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-    }, 6000)
-    return () => clearInterval(interval)
-  }, [])
+  // // Parallax scroll listener
+  // useEffect(() => {
+  //   const handle = () => setScrollY(window.scrollY)
+  //   window.addEventListener("scroll", handle, { passive: true })
+  //   return () => window.removeEventListener("scroll", handle)
+  // }, [])
 
+  // Auto-cycle testimonials
+  useEffect(() => {
+    const id = setInterval(() =>
+      setCurrentTestimonial((p) => (p + 1) % testimonials.length), 6000)
+    return () => clearInterval(id)
+  }, [testimonials.length])
+
+  // // Smooth scroll when clicking links
+  // useEffect(() => {
+  //   const links = Array.from(document.querySelectorAll('a[href^="#"]'))
+  //   links.forEach((link) =>
+  //     link.addEventListener("click", (e) => {
+  //       e.preventDefault()
+  //       const targetId = link.getAttribute("href")!
+  //       const el = document.querySelector(targetId)
+  //       el?.scrollIntoView({ behavior: "smooth", block: "start" })
+  //       setIsMenuOpen(false)
+  //     })
+  //   )
+  // }, [])
+
+  // const parallax = (factor: number) => ({
+  //   transform: `translateY(${scrollY * factor}px)`,
+  //   transition: "transform 0.1s ease-out",
+  // })
   return (
-    <div className="min-h-screen bg-white">
+       <div className="min-h-screen scroll-smooth bg-white text-gray-800">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Edulives-01.jpg-3Osewoj8qJ1ey5vaZ3YnbGIWOesPA4.jpeg"
+                src="/Edulives-logo.jpg"
                 alt="EduLives Logo"
                 width={150}
                 height={40}
