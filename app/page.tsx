@@ -78,7 +78,10 @@ export default function EduLivesLanding() {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <LoadingScreen />
+    <LoadingScreen 
+      logoSrc="/logo.png" 
+      logoAlt="EduLives Logo" 
+    />
       <ScrollProgress />
       
       {/* Header */}
@@ -96,7 +99,7 @@ export default function EduLivesLanding() {
               transition={{ duration: 0.2 }}
             >
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Edulives-01.jpg-3Osewoj8qJ1ey5vaZ3YnbGIWOesPA4.jpeg"
+                src="/logo.png"
                 alt="EduLives Logo"
                 width={150}
                 height={40}
@@ -190,105 +193,201 @@ export default function EduLivesLanding() {
       </motion.header>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div 
-          className="absolute inset-0 parallax"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=1920&h=1080&fit=crop')`,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/85 via-gray-900/80 to-green-900/85"></div>
+      <section className="relative py-24 lg:py-32 overflow-hidden bg-slate-50">
+        {/* Video Background */}
+        <div className="absolute inset-0">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/bg.mp4" type="video/mp4" />
+            {/* Fallback image if video fails to load */}
+            <div 
+              className="w-full h-full bg-cover bg-center"
+              style={{
+                backgroundImage: `url('https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=1920&h=1080&fit=crop')`
+              }}
+            />
+          </video>
+          {/* Professional overlay for better text readability */}
+          <div className="absolute inset-0 bg-slate-900/75"></div>
+        </div>
         
-        <div className="relative container mx-auto px-4 z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection direction="left" className="space-y-8 text-white">
-              <div className="space-y-6">
-                <AnimatedBadge variant="warning" className="bg-yellow-500 text-black border-0 font-semibold">
-                  New Release: EduLives 5.0 with Advanced Analytics
-                </AnimatedBadge>
+        <div className="relative container mx-auto px-6 lg:px-12 z-10">
+          <div className="max-w-6xl mx-auto text-center">
+            {/* Content Section - Full Width */}
+            <AnimatedSection direction="up" className="space-y-12">
+              <div className="space-y-10">
+                {/* Professional Badge */}
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="flex justify-center"
+                >
+                  <AnimatedBadge 
+                    variant="warning" 
+                    className="inline-flex items-center bg-blue-600 text-white border-0 font-semibold px-6 py-3 rounded-full text-base shadow-2xl backdrop-blur-sm"
+                  >
+                    <span className="w-2.5 h-2.5 bg-green-400 rounded-full mr-3 animate-pulse"></span>
+                    New Release: EduLives 5.0 with Advanced Analytics
+                  </AnimatedBadge>
+                </motion.div>
                 
-                <AnimatedText 
-                  text="Complete School Management Software Solution"
-                  className="text-4xl lg:text-6xl font-bold leading-tight"
-                  stagger={0.1}
-                />
+                {/* Main Heading - Centered and Larger */}
+                <div className="space-y-6">
+  <AnimatedText
+    text="Transform Your Educational Institution"
+    className="text-xl lg:text-2xl xl:text-8xl font-bold leading-tight text-white tracking-tight"
+    stagger={0.06}
+  />
+  <AnimatedText
+    text="with Complete School Management Excellence"
+    className="text-lg lg:text-lg xl:text-4xl font-light text-blue-200 leading-relaxed max-w-5xl mx-auto"
+    stagger={0.04}
+  />
+</div>
                 
-                <motion.p 
+                {/* Professional Description */}
+                <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                  className="text-xl text-gray-200 leading-relaxed"
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                  className="space-y-8 max-w-4xl mx-auto"
                 >
-                  Streamline your educational institution with our comprehensive management platform. From student
-                  enrollment to graduation, manage every aspect of your school operations with powerful analytics and
-                  seamless integration.
-                </motion.p>
+                  <p className="text-2xl lg:text-1.5xl text-gray-200 leading-relaxed font-light">
+                    Empower your educational institution with our comprehensive management platform. 
+                    Streamline operations, enhance student outcomes, and drive institutional excellence 
+                    with cutting-edge technology trusted by leading schools worldwide.
+                  </p>
+                  
+                  {/* Enhanced Key Features Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+                    <motion.div 
+                      className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20"
+                      whileHover={{ scale: 1.05, y: -5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                        </svg>
+                      </div>
+                      <div className="text-lg font-semibold text-white">Student Management</div>
+                      <div className="text-sm text-gray-300 text-center">Complete student lifecycle management</div>
+                    </motion.div>
+                    <motion.div 
+                      className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20"
+                      whileHover={{ scale: 1.05, y: -5 }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                    >
+                      <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                      </div>
+                      <div className="text-lg font-semibold text-white">Advanced Analytics</div>
+                      <div className="text-sm text-gray-300 text-center">Data-driven insights & reporting</div>
+                    </motion.div>
+                    <motion.div 
+                      className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20"
+                      whileHover={{ scale: 1.05, y: -5 }}
+                      transition={{ duration: 0.3, delay: 0.2 }}
+                    >
+                      <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
+                        </svg>
+                      </div>
+                      <div className="text-lg font-semibold text-white">Multi-Campus</div>
+                      <div className="text-sm text-gray-300 text-center">Unified management across locations</div>
+                    </motion.div>
+                  </div>
+                </motion.div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* Enhanced CTA Buttons */}
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4"
+              >
                 <AnimatedButton 
                   size="lg" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-5 text-xl font-semibold rounded-xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
                 >
                   Schedule Live Demo
+                  <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1M7 7h10v10H7V7z" />
+                  </svg>
                 </AnimatedButton>
                 <AnimatedButton
                   size="lg"
                   variant="outline"
-                  className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white px-8 py-4 text-lg bg-transparent"
+                  className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-12 py-5 text-xl font-semibold rounded-xl bg-white/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:-translate-y-1"
                 >
                   Start Free Trial
+                  <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
                 </AnimatedButton>
-              </div>
+              </motion.div>
 
-              <div className="flex items-center space-x-8 pt-4">
+              {/* Enhanced Trust Indicators */}
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 border-t border-white/20 max-w-4xl mx-auto"
+              >
                 <FloatingElement className="text-center">
-                  <div className="text-3xl font-bold text-blue-400">
+                  <div className="text-5xl lg:text-6xl font-bold text-white mb-2">
                     <AnimatedCounter value={50000} />+
                   </div>
-                  <div className="text-sm text-gray-300">Active Schools</div>
+                  <div className="text-lg text-gray-300 font-medium">Active Schools Worldwide</div>
+                  <div className="text-sm text-blue-300 mt-1">Across 6 continents</div>
                 </FloatingElement>
                 <FloatingElement className="text-center" duration={3.5}>
-                  <div className="text-3xl font-bold text-green-400">
+                  <div className="text-5xl lg:text-6xl font-bold text-white mb-2">
                     <AnimatedCounter value={180} />+
                   </div>
-                  <div className="text-sm text-gray-300">Countries</div>
+                  <div className="text-lg text-gray-300 font-medium">Countries Served</div>
+                  <div className="text-sm text-blue-300 mt-1">Global presence</div>
                 </FloatingElement>
                 <FloatingElement className="text-center" duration={4}>
-                  <div className="text-3xl font-bold text-yellow-400">
+                  <div className="text-5xl lg:text-6xl font-bold text-white mb-2">
                     <AnimatedCounter value={25} />+
                   </div>
-                  <div className="text-sm text-gray-300">Languages</div>
+                  <div className="text-lg text-gray-300 font-medium">Languages Supported</div>
+                  <div className="text-sm text-blue-300 mt-1">Localized experience</div>
                 </FloatingElement>
-              </div>
-            </AnimatedSection>
+              </motion.div>
 
-            <AnimatedSection direction="right" className="relative">
-              <FloatingElement className="relative z-10">
-                <Image
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
-                  alt="EduLives Dashboard Interface"
-                  width={600}
-                  height={400}
-                  className="rounded-2xl shadow-2xl border-4 border-white/20"
-                />
-                <motion.div 
-                  className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-2xl p-4"
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <Image
-                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=120&h=200&fit=crop"
-                    alt="Mobile Application"
-                    width={120}
-                    height={200}
-                    className="rounded-lg"
-                  />
-                </motion.div>
-              </FloatingElement>
+              {/* Professional Certification/Trust Badges */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.4 }}
+                className="pt-12"
+              >
+                <div className="text-lg text-gray-400 mb-6">Trusted by leading educational institutions worldwide</div>
+                <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
+                  <div className="h-12 w-32 bg-white/20 rounded-lg backdrop-blur-sm"></div>
+                  <div className="h-12 w-32 bg-white/20 rounded-lg backdrop-blur-sm"></div>
+                  <div className="h-12 w-32 bg-white/20 rounded-lg backdrop-blur-sm"></div>
+                  <div className="h-12 w-32 bg-white/20 rounded-lg backdrop-blur-sm"></div>
+                </div>
+              </motion.div>
             </AnimatedSection>
           </div>
         </div>
+
+        {/* Professional Bottom Accent */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-green-500 to-blue-600"></div>
       </section>
 
       {/* Why EduLives Section */}

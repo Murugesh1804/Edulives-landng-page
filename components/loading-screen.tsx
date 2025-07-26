@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 
-export const LoadingScreen = () => {
+export const LoadingScreen = ({ logoSrc, logoAlt = "Logo" }) => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -31,8 +31,16 @@ export const LoadingScreen = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl mx-auto flex items-center justify-center shadow-2xl">
-            <span className="text-white text-2xl font-bold">EL</span>
+          <div className="w-24 h-24 bg-gradient-to-r from-blue-200 to-green-200 rounded-2xl mx-auto flex items-center justify-center shadow-md p-2 border border-gray-200">
+            {logoSrc ? (
+              <img 
+                src={logoSrc} 
+                alt={logoAlt}
+                className="w-full h-full object-contain rounded-xl"
+              />
+            ) : (
+              <span className="text-white text-2xl font-bold">EL</span>
+            )}
           </div>
         </motion.div>
 
@@ -91,4 +99,4 @@ export const LoadingScreen = () => {
       </div>
     </motion.div>
   )
-} 
+}
