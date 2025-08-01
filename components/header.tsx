@@ -10,57 +10,58 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200/50 shadow-soft">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <header className="sticky top-0 z-50 nav-modern">
+      <div className="container mx-auto container-padding">
+        <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600">
+            <Link href="/" className="flex items-center space-x-4">
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 shadow-soft">
                 <Image
                   src="/images/edulives-logo.png"
                   alt="EduLives Logo"
-                  width={100}
-                  height={40}
-                  className="object-contain w-100 h-10"
+                  width={120}
+                  height={48}
+                  className="object-contain w-12 h-12"
                   priority
                 />
               </div>
+              <span className="text-2xl font-bold text-neutral-900">EduLives</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#features" className="text-neutral-700 hover:text-blue-600 transition-colors font-medium">
+          <nav className="hidden lg:flex items-center space-x-12">
+            <Link href="#features" className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300">
               Features
             </Link>
-            <Link href="#how-it-works" className="text-neutral-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="#how-it-works" className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300">
               How It Works
             </Link>
-            <Link href="#pricing" className="text-neutral-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="#pricing" className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300">
               Pricing
             </Link>
-            <Link href="#testimonials" className="text-neutral-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="#testimonials" className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300">
               Testimonials
             </Link>
-            <Link href="#about" className="text-neutral-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="#about" className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300">
               About
             </Link>
           </nav>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-neutral-700 hover:text-blue-600 font-medium">
+          <div className="hidden lg:flex items-center space-x-6">
+            <Button variant="ghost" className="text-body font-medium text-neutral-700 hover:text-blue-600 hover:bg-blue-50/50 transition-all duration-300">
               Login
             </Button>
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-soft hover:shadow-medium transition-all duration-300 group">
+            <Button className="btn-modern btn-primary group">
               Get Started
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors" 
+            className="lg:hidden p-3 rounded-2xl hover:bg-neutral-100 transition-all duration-300 focus-modern" 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -69,50 +70,50 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-6 border-t border-neutral-200/50 bg-white/95 backdrop-blur-sm">
-            <nav className="flex flex-col space-y-4">
+          <div className="lg:hidden py-8 border-t border-neutral-200/50 bg-white/95 backdrop-blur-sm">
+            <nav className="flex flex-col space-y-6">
               <Link 
                 href="#features" 
-                className="text-neutral-700 hover:text-blue-600 transition-colors font-medium py-2"
+                className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300 py-3 hover:bg-blue-50/50 rounded-2xl px-4"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </Link>
               <Link 
                 href="#how-it-works" 
-                className="text-neutral-700 hover:text-blue-600 transition-colors font-medium py-2"
+                className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300 py-3 hover:bg-blue-50/50 rounded-2xl px-4"
                 onClick={() => setIsMenuOpen(false)}
               >
                 How It Works
               </Link>
               <Link 
                 href="#pricing" 
-                className="text-neutral-700 hover:text-blue-600 transition-colors font-medium py-2"
+                className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300 py-3 hover:bg-blue-50/50 rounded-2xl px-4"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
               </Link>
               <Link 
                 href="#testimonials" 
-                className="text-neutral-700 hover:text-blue-600 transition-colors font-medium py-2"
+                className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300 py-3 hover:bg-blue-50/50 rounded-2xl px-4"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Testimonials
               </Link>
               <Link 
                 href="#about" 
-                className="text-neutral-700 hover:text-blue-600 transition-colors font-medium py-2"
+                className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300 py-3 hover:bg-blue-50/50 rounded-2xl px-4"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
-              <div className="flex flex-col space-y-3 pt-4 border-t border-neutral-200/50">
-                <Button variant="ghost" className="justify-start font-medium">
+              <div className="flex flex-col space-y-4 pt-6 border-t border-neutral-200/50">
+                <Button variant="ghost" className="justify-start text-body font-medium hover:bg-blue-50/50">
                   Login
                 </Button>
-                <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white justify-start group">
+                <Button className="btn-modern btn-primary justify-start group">
                   Get Started
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </div>
             </nav>

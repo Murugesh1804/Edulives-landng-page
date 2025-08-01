@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -118,6 +118,201 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
                       linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
+  }
+
+  /* Modern typography utilities */
+  .text-display {
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .text-heading {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .text-subheading {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  .text-body-large {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    line-height: 1.6;
+  }
+
+  .text-body {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+  }
+
+  /* Modern spacing utilities */
+  .section-padding {
+    padding: clamp(4rem, 8vw, 8rem) 0;
+  }
+
+  .container-padding {
+    padding: 0 clamp(1rem, 4vw, 2rem);
+  }
+
+  /* Modern border radius utilities */
+  .rounded-modern {
+    border-radius: 1.5rem;
+  }
+
+  .rounded-modern-lg {
+    border-radius: 2rem;
+  }
+
+  .rounded-modern-xl {
+    border-radius: 3rem;
+  }
+
+  /* Modern gradient backgrounds */
+  .bg-gradient-modern {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+  }
+
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
+  }
+
+  .bg-gradient-secondary {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);
+  }
+
+  .bg-gradient-accent {
+    background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  }
+
+  /* Modern button styles */
+  .btn-modern {
+    @apply px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-primary text-white shadow-lg hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .btn-secondary {
+    @apply bg-white border-2 border-neutral-200 text-neutral-700 shadow-soft hover:shadow-medium hover:-translate-y-1;
+  }
+
+  /* Modern card styles */
+  .card-modern {
+    @apply bg-white/95 backdrop-blur-lg rounded-3xl border border-neutral-200/50 shadow-soft hover:shadow-medium transition-all duration-300;
+  }
+
+  /* Modern input styles */
+  .input-modern {
+    @apply px-6 py-4 rounded-2xl border-2 border-neutral-200 bg-white/90 backdrop-blur-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300;
+  }
+
+  /* Modern navigation styles */
+  .nav-modern {
+    @apply bg-white/90 backdrop-blur-lg border-b border-neutral-200/50 shadow-soft;
+  }
+
+  /* Modern footer styles */
+  .footer-modern {
+    @apply bg-neutral-900 text-white;
+  }
+
+  /* Modern section dividers */
+  .divider-modern {
+    @apply h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent;
+  }
+
+  /* Modern list styles */
+  .list-modern {
+    @apply space-y-4;
+  }
+
+  .list-item-modern {
+    @apply flex items-center space-x-3 text-lg text-neutral-600;
+  }
+
+  /* Modern badge styles */
+  .badge-modern {
+    @apply px-4 py-2 rounded-xl text-sm font-semibold;
+  }
+
+  .badge-primary {
+    @apply bg-blue-100 text-blue-700;
+  }
+
+  .badge-secondary {
+    @apply bg-purple-100 text-purple-700;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-green-700;
+  }
+
+  .badge-warning {
+    @apply bg-orange-100 text-orange-700;
+  }
+
+  /* Modern progress bar */
+  .progress-modern {
+    @apply w-full bg-neutral-200 rounded-full h-3 overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-3 rounded-full transition-all duration-500;
+  }
+
+  /* Modern tooltip */
+  .tooltip-modern {
+    @apply absolute z-50 px-4 py-2 text-sm text-white bg-neutral-900 rounded-xl shadow-lg opacity-0 pointer-events-none transition-opacity duration-300;
+  }
+
+  .tooltip-modern::after {
+    content: '';
+    @apply absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900;
+  }
+
+  /* Modern loading states */
+  .loading-modern {
+    @apply animate-pulse bg-neutral-200 rounded-2xl;
+  }
+
+  .skeleton-modern {
+    @apply bg-gradient-to-r from-neutral-200 via-neutral-100 to-neutral-200 bg-size-200 animate-pulse;
+  }
+
+  /* Modern focus states */
+  .focus-modern {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-offset-2;
+  }
+
+  /* Modern scrollbar */
+  .scrollbar-modern {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+  }
+
+  .scrollbar-modern::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-modern::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+  }
+
+  .scrollbar-modern::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+
+  .scrollbar-modern::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
   }
 }
 
@@ -389,18 +584,51 @@
   }
   
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
+    @apply text-display;
   }
   
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply text-heading;
   }
   
   h3 {
-    @apply text-2xl md:text-3xl;
+    @apply text-subheading;
   }
   
   p {
-    @apply leading-relaxed;
+    @apply text-body leading-relaxed;
+  }
+
+  /* Modern link styles */
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  /* Modern button base styles */
+  button {
+    @apply focus-modern;
+  }
+
+  /* Modern input base styles */
+  input, textarea, select {
+    @apply focus-modern;
+  }
+
+  /* Modern scrollbar for the entire page */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
   }
 }
