@@ -94,7 +94,7 @@ export function Header() {
           <div className="lg:hidden py-8 border-t border-neutral-200/50 bg-white/95 backdrop-blur-sm">
             <nav className="flex flex-col space-y-6">
               <Link 
-                href="#features" 
+                href="/features" 
                 className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300 py-3 hover:bg-blue-50/50 rounded-2xl px-4"
                 onClick={() => setIsMenuOpen(false)}
               >
