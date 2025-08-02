@@ -266,7 +266,7 @@ export function HeroSection() {
                       muted
                       poster="/images/logo.jpg"
                     >
-                      <source src="/Tour.mp4" type="video/mp4" />
+                      <source src="/Tour-web.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
