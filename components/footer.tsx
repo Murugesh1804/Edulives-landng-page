@@ -1,5 +1,15 @@
 import Link from "next/link"
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowRight } from "lucide-react"
+import Image from "next/image"
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+} from "lucide-react"
 
 export function Footer() {
   return (
@@ -11,20 +21,25 @@ export function Footer() {
       </div>
 
       <div className="container mx-auto container-padding py-24 relative z-10">
-        <div className="grid lg:grid-cols-4 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand section */}
-          <div className="space-y-8">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-soft">
-                <span className="text-white font-bold text-xl">E</span>
-              </div>
+          <div className="flex flex-col items-center lg:items-start space-y-8 text-center lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start space-x-4">
+              <Image
+                src="/images/edulives-logo.png"
+                alt="EduLives Logo"
+                width={48}
+                height={48}
+                className="object-contain w-12 h-12"
+                priority
+              />
               <span className="text-2xl font-bold text-white">EduLives</span>
             </div>
             <p className="text-body text-neutral-300 max-w-sm leading-relaxed">
               Empowering educational institutions with comprehensive management solutions that evolve seamlessly with
               your needs. Transform your school's operations today.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center lg:justify-start space-x-4">
               <Link href="#" className="w-12 h-12 bg-neutral-800 rounded-2xl flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-700 transition-all duration-300 hover-lift">
                 <Facebook className="w-6 h-6" />
               </Link>
@@ -41,7 +56,7 @@ export function Footer() {
           </div>
 
           {/* Product links */}
-          <div>
+          <div className="flex flex-col items-center lg:items-start">
             <h3 className="text-white font-semibold mb-8 text-xl">Product</h3>
             <ul className="space-y-6">
               <li>
@@ -84,7 +99,7 @@ export function Footer() {
           </div>
 
           {/* Company links */}
-          <div>
+          <div className="flex flex-col items-center lg:items-start">
             <h3 className="text-white font-semibold mb-8 text-xl">Company</h3>
             <ul className="space-y-6">
               <li>
@@ -127,7 +142,7 @@ export function Footer() {
           </div>
 
           {/* Contact info */}
-          <div>
+          <div className="flex flex-col items-center lg:items-start">
             <h3 className="text-white font-semibold mb-8 text-xl">Contact Info</h3>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -157,11 +172,11 @@ export function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="divider-modern mt-20 pt-12 flex flex-col sm:flex-row justify-between items-center">
+        <div className="divider-modern mt-20 pt-12 flex flex-col md:flex-row md:justify-between md:items-center items-center text-center gap-6 md:gap-0">
           <p className="text-body text-neutral-400">
             © {new Date().getFullYear()} EduLives. All rights reserved.
           </p>
-          <div className="flex space-x-12 mt-6 sm:mt-0">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-12">
             <Link href="#" className="text-body text-neutral-400 hover:text-white transition-colors duration-300">
               Privacy Policy
             </Link>

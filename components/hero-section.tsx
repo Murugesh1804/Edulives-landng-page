@@ -119,10 +119,25 @@ export function HeroSection() {
             transform: translateY(0);
           }
         }
+
+        .hero-bg-pattern {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          background-image: url('/bg.png');
+          background-repeat: repeat;
+          background-size: auto;
+          opacity: 0.12;
+          pointer-events: none;
+        }
       `}</style>
 
       <div className="hero-container">
         <section className="relative min-h-screen bg-gradient-to-br from-neutral-50 via-white to-blue-50/30 overflow-hidden">
+          {/* Pattern background image */}
+          <div className="hero-bg-pattern" aria-hidden="true"></div>
           {/* Subtle background elements */}
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-blue-100/20 to-indigo-100/20 rounded-full blur-3xl"></div>
@@ -168,9 +183,12 @@ export function HeroSection() {
 
               {/* CTA Buttons */}
               <div className={`flex flex-col sm:flex-row gap-6 justify-center mb-24 ${isLoaded ? 'fade-in-up' : ''}`}>
-                <Button 
-                  size="lg" 
-                  className="gradient-bg-primary text-white px-12 py-6 text-xl font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-400 group border-0 hover-lift"
+                <Button
+                  size="lg"
+                  className="text-white px-12 py-8 text-xl font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-400 group border-0 hover-lift"
+                  style={{
+                    background: 'linear-gradient(90deg, #4285C5 0%, #34A853 100%)'
+                  }}
                 >
                   View Dashboard Demo
                   <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
@@ -178,7 +196,7 @@ export function HeroSection() {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-2 border-neutral-300 bg-white/90 backdrop-blur-sm hover:bg-white px-12 py-6 text-xl font-semibold rounded-2xl shadow-soft hover:shadow-lg transition-all duration-400 group hover-lift"
+                  className="border-2 border-neutral-300 bg-white/90 backdrop-blur-sm hover:bg-white px-12 py-8 text-xl font-semibold rounded-2xl shadow-soft hover:shadow-lg transition-all duration-400 group hover-lift"
                 >
                   <Play className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                   Start Free Trial
@@ -186,184 +204,103 @@ export function HeroSection() {
               </div>
 
               {/* Feature Stats */}
-              <div className={`grid grid-cols-1 md:grid-cols-3 gap-12 mb-24 ${isLoaded ? 'fade-in-up' : ''}`}>
-                {/* Statistics Card 1 */}
-                <div className="group relative hover-lift">
-                  <div className="bg-white/95 backdrop-blur-lg rounded-3xl p-10 shadow-soft hover:shadow-large transition-all duration-500 border border-neutral-200/50">
-                    <div className="text-center">
-                      <div className="text-5xl font-bold text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300">500+</div>
-                      <div className="text-xl font-semibold text-neutral-700 mb-2">Schools Trust Us</div>
-                      <div className="text-lg text-neutral-500">Nationwide coverage</div>
-                      <div className="mt-6 w-full bg-blue-100 rounded-full h-3">
-                        <div className="gradient-bg-primary h-3 rounded-full" style={{width: '85%'}}></div>
-                      </div>
+              <div
+                className={`rounded-2xl p-8 mb-24 border border-white/10 ${isLoaded ? 'fade-in-up' : ''}`}
+                style={{
+                  background: 'linear-gradient(135deg, #4285C5 0%, #34A853 100%)'
+                }}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center">
+                  {/* Schools & Colleges */}
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <div className="w-12 h-12 flex items-center justify-center mb-2">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-white">40,000+</div>
+                      <div className="text-sm text-white/80">Schools & Colleges</div>
                     </div>
                   </div>
-                </div>
 
-                {/* Statistics Card 2 */}
-                <div className="group relative hover-lift">
-                  <div className="bg-white/95 backdrop-blur-lg rounded-3xl p-10 shadow-soft hover:shadow-large transition-all duration-500 border border-neutral-200/50">
-                    <div className="text-center">
-                      <div className="text-5xl font-bold text-green-600 mb-4 group-hover:scale-110 transition-transform duration-300">99.9%</div>
-                      <div className="text-xl font-semibold text-neutral-700 mb-2">Uptime Guarantee</div>
-                      <div className="text-lg text-neutral-500">Always available</div>
-                      <div className="mt-6 w-full bg-green-100 rounded-full h-3">
-                        <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-3 rounded-full" style={{width: '99%'}}></div>
-                      </div>
+                  {/* Countries */}
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <div className="w-12 h-12 flex items-center justify-center mb-2">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-white">200+</div>
+                      <div className="text-sm text-white/80">Countries</div>
                     </div>
                   </div>
-                </div>
 
-                {/* Statistics Card 3 */}
-                <div className="group relative hover-lift">
-                  <div className="bg-white/95 backdrop-blur-lg rounded-3xl p-10 shadow-soft hover:shadow-large transition-all duration-500 border border-neutral-200/50">
-                    <div className="text-center">
-                      <div className="text-5xl font-bold text-purple-600 mb-4 group-hover:scale-110 transition-transform duration-300">24/7</div>
-                      <div className="text-xl font-semibold text-neutral-700 mb-2">Support Available</div>
-                      <div className="text-lg text-neutral-500">Round the clock</div>
-                      <div className="mt-6 w-full bg-purple-100 rounded-full h-3">
-                        <div className="gradient-bg-secondary h-3 rounded-full" style={{width: '100%'}}></div>
-                      </div>
+                  {/* Languages */}
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <div className="w-12 h-12 flex items-center justify-center mb-2">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-white">20+</div>
+                      <div className="text-sm text-white/80">Languages</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Dashboard Preview */}
+            {/* Dashboard Tour Video */}
             <div className={`pb-24 ${isLoaded ? 'fade-in-up' : ''}`}>
-              {/* Role Switcher */}
-              <div className="flex justify-center mb-12">
-                <div className="bg-white/90 backdrop-blur-md rounded-3xl p-3 shadow-soft border border-neutral-200/50">
-                  <div className="flex space-x-3">
-                    <button className="px-10 py-4 rounded-2xl gradient-bg-primary text-white font-semibold text-lg transition-all duration-300 hover-lift">
-                      Student View
-                    </button>
-                    <button className="px-10 py-4 rounded-2xl text-neutral-600 font-semibold text-lg hover:bg-white/60 transition-all duration-300">
-                      Teacher View
-                    </button>
-                    <button className="px-10 py-4 rounded-2xl text-neutral-600 font-semibold text-lg hover:bg-white/60 transition-all duration-300">
-                      Principal View
-                    </button>
+              <div className="flex justify-center">
+                <div className="w-full max-w-6xl rounded-3xl overflow-hidden shadow-2xl border border-neutral-200/60 bg-white/90 backdrop-blur-md font-sans">
+                  <div className="relative aspect-video bg-black flex items-center justify-center">
+                    {/* Fallback image if video fails to load or is blocked */}
+                    <video
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      loop
+                      muted
+                      poster="/images/logo.jpg"
+                    >
+                      <source src="/Tour.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
-                </div>
-              </div>
-
-              {/* Dashboard Mock */}
-              <div className="max-w-7xl mx-auto">
-                <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-large border border-neutral-200/50 overflow-hidden hover:shadow-2xl transition-all duration-500">
-                  {/* Browser Header */}
-                  <div className="bg-gradient-to-r from-neutral-100 to-neutral-200 px-8 py-6 border-b border-neutral-200">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-4 h-4 bg-red-400 rounded-full"></div>
-                      <div className="w-4 h-4 bg-yellow-400 rounded-full"></div>
-                      <div className="w-4 h-4 bg-green-400 rounded-full"></div>
-                      <div className="ml-8 text-lg font-medium text-neutral-600">EduLives Dashboard</div>
-                    </div>
-                  </div>
-
-                  {/* Dashboard Content */}
-                  <div className="p-12">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                      <div className="space-y-8">
-                        {/* Schedule Card */}
-                        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-100 hover-lift">
-                          <div className="flex items-center mb-8">
-                            <div className="w-12 h-12 gradient-bg-primary rounded-2xl flex items-center justify-center mr-4">
-                              <Calendar className="w-6 h-6 text-white" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-neutral-900">Today's Schedule</h3>
-                          </div>
-                          <div className="space-y-4">
-                            <div className="flex items-center justify-between p-6 bg-white rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 hover-lift">
-                              <div>
-                                <div className="text-xl font-semibold text-neutral-900">Mathematics</div>
-                                <div className="text-lg text-neutral-600">Mr. Johnson • Room 201</div>
-                              </div>
-                              <div className="text-lg font-semibold text-blue-600 bg-blue-100 px-4 py-2 rounded-xl">9:00 AM</div>
-                            </div>
-                            <div className="flex items-center justify-between p-6 bg-white rounded-2xl shadow-soft hover:shadow-medium transition-all duration-200 hover-lift">
-                              <div>
-                                <div className="text-xl font-semibold text-neutral-900">English Literature</div>
-                                <div className="text-lg text-neutral-600">Ms. Davis • Room 105</div>
-                              </div>
-                              <div className="text-lg font-semibold text-indigo-600 bg-indigo-100 px-4 py-2 rounded-xl">10:30 AM</div>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Assignments Card */}
-                        <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-100 hover-lift">
-                          <div className="flex items-center mb-8">
-                            <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mr-4">
-                              <FileText className="w-6 h-6 text-white" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-neutral-900">Assignment Status</h3>
-                          </div>
-                          <div className="space-y-4">
-                            <div className="flex items-center justify-between p-6 bg-white rounded-2xl hover:shadow-soft transition-all duration-200 hover-lift">
-                              <span className="text-xl font-semibold text-neutral-700">Math Homework</span>
-                              <span className="px-4 py-2 bg-green-100 text-green-700 text-lg font-semibold rounded-xl">Submitted</span>
-                            </div>
-                            <div className="flex items-center justify-between p-6 bg-white rounded-2xl hover:shadow-soft transition-all duration-200 hover-lift">
-                              <span className="text-xl font-semibold text-neutral-700">Science Project</span>
-                              <span className="px-4 py-2 bg-orange-100 text-orange-700 text-lg font-semibold rounded-xl">Due Tomorrow</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-8">
-                        {/* Attendance Card */}
-                        <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-3xl p-8 border border-purple-100 hover-lift">
-                          <div className="flex items-center mb-8">
-                            <div className="w-12 h-12 gradient-bg-secondary rounded-2xl flex items-center justify-center mr-4">
-                              <Users className="w-6 h-6 text-white" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-neutral-900">Attendance Report</h3>
-                          </div>
-                          <div className="space-y-6">
-                            <div className="flex items-center justify-between">
-                              <span className="text-xl font-semibold text-neutral-700">Present Days</span>
-                              <span className="font-bold text-4xl text-neutral-900">18/20</span>
-                            </div>
-                            <div className="w-full bg-neutral-200 rounded-full h-4 overflow-hidden">
-                              <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-4 rounded-full progress-bar"></div>
-                            </div>
-                            <div className="text-lg font-semibold text-neutral-600">90% attendance rate</div>
-                          </div>
-                        </div>
-
-                        {/* Fee Receipt Card */}
-                        <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 border border-orange-100 hover-lift">
-                          <div className="flex items-center mb-8">
-                            <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mr-4">
-                              <CreditCard className="w-6 h-6 text-white" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-neutral-900">Fee Receipt</h3>
-                          </div>
-                          <div className="space-y-4">
-                            <div className="flex justify-between p-4 hover:bg-white rounded-2xl transition-colors duration-200">
-                              <span className="text-lg text-neutral-600">Tuition Fee</span>
-                              <span className="text-xl font-semibold text-neutral-900">$1,200</span>
-                            </div>
-                            <div className="flex justify-between p-4 hover:bg-white rounded-2xl transition-colors duration-200">
-                              <span className="text-lg text-neutral-600">Library Fee</span>
-                              <span className="text-xl font-semibold text-neutral-900">$50</span>
-                            </div>
-                            <div className="border-t border-orange-200 pt-6 mt-6">
-                              <div className="flex justify-between items-center">
-                                <span className="text-2xl font-bold text-neutral-900">Total</span>
-                                <span className="text-3xl font-bold text-neutral-900">$1,325</span>
-                              </div>
-                            </div>
-                            <div className="mt-6">
-                              <span className="px-6 py-3 bg-green-100 text-green-700 text-xl font-semibold rounded-xl">✓ Paid</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                  <div className="p-8 md:p-10 text-center">
+                    <h3 className="text-gradient-primary text-3xl md:text-4xl font-extrabold leading-tight mb-3 font-sans">
+                      See the EduLives Dashboard in Action
+                    </h3>
+                    <p className="text-neutral-700 text-lg md:text-xl font-medium font-sans">
+                      Watch a quick tour of the all-in-one dashboard for students, teachers, and principals.
+                    </p>
+                    <div className="mt-4 text-sm text-neutral-500">
+                      {/*
+                        If the video does not play, provide a download link and troubleshooting tips.
+                      */}
+                      <span>
+                        Having trouble viewing the video?{" "}
+                        <a
+                          href="/tour.mp4"
+                          download
+                          className="text-blue-600 underline hover:text-blue-800"
+                        >
+                          Download the video
+                        </a>
+                        {" "}or{" "}
+                        <a
+                          href="https://get.adobe.com/flashplayer/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 underline hover:text-blue-800"
+                        >
+                          check your browser settings
+                        </a>
+                        .
+                      </span>
                     </div>
                   </div>
                 </div>
