@@ -47,21 +47,21 @@ export default function EduLivesLanding() {
 
   const testimonials = [
     {
-      text: "EduLives has completely transformed how we manage our school operations. The integrated approach to student information management, attendance tracking, and parent communication has increased our administrative efficiency by 85%. Our teachers can now focus more on teaching rather than paperwork.",
+      text: "The role-based dashboards in EduLives have revolutionized our school management. Each user gets exactly what they need - principals have institutional oversight, teachers focus on their classes, and parents stay connected. The multi-level approval workflows have streamlined our decision-making process significantly.",
       author: "Dr. Sarah Johnson",
       position: "Principal",
       school: "Greenwood International School, California",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
     },
     {
-      text: "The parent engagement features in EduLives are exceptional. We've seen a 200% increase in parent participation in school activities since implementation. The real-time grade updates and communication tools have strengthened our school community significantly.",
+      text: "As an IT administrator, I appreciate the granular role controls and comprehensive audit logs. The system's security features and user management capabilities make it easy to maintain data integrity while providing appropriate access to different user groups.",
       author: "Michael Chen",
       position: "IT Director",
       school: "Riverside Academy, New York",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     },
     {
-      text: "From admission processing to graduation ceremonies, EduLives handles every aspect seamlessly. Our administrative workload has decreased by 60%, allowing us to invest more time in curriculum development and student success initiatives.",
+      text: "The integrated approach to academics, finance, and administration has transformed our operations. Real-time monitoring of attendance, assignments, and performance allows us to intervene early and support student success. The inventory and transport modules have eliminated manual tracking completely.",
       author: "Dr. Priya Patel",
       position: "Academic Director",
       school: "Future Leaders International School, Texas",
@@ -287,7 +287,7 @@ export default function EduLivesLanding() {
                 </motion.div>
                 
                 <AnimatedText 
-                  text="Complete School Management Software Solution"
+                  text="Enterprise School Management Platform"
                   className="text-4xl lg:text-6xl font-bold leading-tight"
                   stagger={0.1}
                 />
@@ -298,9 +298,9 @@ export default function EduLivesLanding() {
                   transition={{ duration: 0.8, delay: 0.5 }}
                   className="text-xl text-gray-200 leading-relaxed"
                 >
-                  Streamline your educational institution with our comprehensive management platform. From student
-                  enrollment to graduation, manage every aspect of your school operations with powerful analytics and
-                  seamless integration.
+                  Comprehensive role-based dashboards for principals, teachers, students, and parents. Manage academics, 
+                  finance, inventory, transport, and communication through a unified platform with real-time analytics 
+                  and multi-level approval workflows.
                 </motion.p>
               </div>
 
@@ -314,7 +314,7 @@ export default function EduLivesLanding() {
                   transition={{ duration: 0.2 }}
                   className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-xl hover:shadow-2xl text-lg flex items-center justify-center space-x-2"
                 >
-                  <span>Schedule Live Demo</span>
+                  <span>Explore Dashboard</span>
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
@@ -331,7 +331,7 @@ export default function EduLivesLanding() {
                   transition={{ duration: 0.2 }}
                   className="px-8 py-4 border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 bg-transparent text-lg backdrop-blur-sm"
                 >
-                  Start Free Trial
+                  Request Demo
                 </motion.button>
               </div>
 
@@ -421,11 +421,11 @@ export default function EduLivesLanding() {
         
         <div className="relative container mx-auto px-4 z-10">
           <AnimatedSection className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose EduLives School Management System?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Enterprise-Grade School Management Platform</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              EduLives provides a comprehensive educational management ecosystem designed specifically for modern
-              schools. Our platform combines powerful functionality with intuitive design to help educational
-              institutions operate more efficiently and effectively.
+              EduLives delivers comprehensive role-based dashboards with multi-level approval workflows, real-time 
+              monitoring, and integrated modules for academics, finance, inventory, transport, and communication. 
+              Designed for modern educational institutions seeking operational excellence.
             </p>
           </AnimatedSection>
 
@@ -434,20 +434,20 @@ export default function EduLivesLanding() {
               {[
                 {
                   icon: Zap,
-                  title: "Streamlined Operations",
-                  description: "Reduce administrative workload by up to 70% with intelligent automation, integrated workflows, and centralized data management across all school departments.",
+                  title: "Role-Based Dashboards",
+                  description: "Tailored interfaces for principals, teachers, students, parents, and administrators with role-specific permissions, workflows, and real-time access to relevant data and functions.",
                   color: "bg-blue-600"
                 },
                 {
                   icon: Shield,
-                  title: "Data Security & Compliance",
-                  description: "Enterprise-grade security with bank-level encryption, regular security audits, and full compliance with FERPA, GDPR, and other educational data protection standards.",
+                  title: "Multi-Level Approvals & Security",
+                  description: "Enterprise-grade security with hierarchical approval workflows, audit logs, role-based access controls, and compliance with educational data protection standards.",
                   color: "bg-green-500"
                 },
                 {
                   icon: BarChart3,
-                  title: "Advanced Analytics",
-                  description: "Make data-driven decisions with comprehensive reporting, predictive analytics, and real-time insights into student performance, attendance patterns, and institutional metrics.",
+                  title: "Real-Time Analytics & Monitoring",
+                  description: "Comprehensive dashboards with live attendance tracking, performance monitoring, financial reports, inventory status, and predictive analytics for informed decision-making.",
                   color: "bg-yellow-500"
                 }
               ].map((feature, index) => (
@@ -485,53 +485,53 @@ export default function EduLivesLanding() {
         
         <div className="relative container mx-auto px-4 z-10">
           <AnimatedSection className="text-center mb-16 text-white">
-            <h2 className="text-4xl font-bold mb-6">Comprehensive School Management Modules</h2>
+            <h2 className="text-4xl font-bold mb-6">Core Platform Features</h2>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Everything you need to run a modern educational institution - from student enrollment to alumni
-              management, all integrated into one powerful platform.
+              Comprehensive modules covering every aspect of school operations - from academic management to 
+              administrative functions, all integrated through role-based dashboards with real-time synchronization.
             </p>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Student Information System",
-                description: "Complete student lifecycle management including enrollment, academic records, attendance tracking, and progress monitoring with detailed reporting capabilities.",
+                title: "Role-Based Dashboards",
+                description: "Customized interfaces for principals, vice principals, HODs, teachers, students, parents, admin staff, IT admins, and counselors with role-specific permissions and workflows.",
                 image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=300&h=200&fit=crop",
                 color: "bg-blue-600",
                 icon: Users
               },
               {
-                title: "Academic Management",
-                description: "Comprehensive curriculum planning, grade management, examination scheduling, report card generation, and academic performance analytics for informed decision making.",
+                title: "Real-Time Monitoring",
+                description: "Live attendance tracking, performance monitoring, behavioral analytics, and academic progress with instant notifications and automated reporting systems.",
                 image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=300&h=200&fit=crop",
                 color: "bg-green-500",
                 icon: Award
               },
               {
-                title: "Parent Communication Portal",
-                description: "Real-time communication platform enabling instant messaging, progress updates, event notifications, and virtual parent-teacher conferences for enhanced engagement.",
+                title: "Assignment & Homework Tracking",
+                description: "Complete assignment lifecycle management with submission tracking, grading workflows, plagiarism detection, and automated notifications to students and parents.",
                 image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300&h=200&fit=crop",
                 color: "bg-yellow-500",
                 icon: Globe
               },
               {
-                title: "Timetable & Scheduling",
-                description: "Intelligent scheduling system with conflict resolution, resource optimization, substitute teacher management, and automated timetable generation for all classes.",
+                title: "Fee & Inventory Management",
+                description: "Comprehensive financial management with online payments, installment tracking, inventory control, asset management, and automated billing with receipt generation.",
                 image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop",
                 color: "bg-blue-600",
                 icon: Clock
               },
               {
-                title: "Financial Management",
-                description: "Complete fee management with online payments, installment tracking, financial reporting, budget planning, and integration with popular payment gateways.",
+                title: "Transport & Hostel Integration",
+                description: "Integrated transport management with route optimization, vehicle tracking, hostel management, room allocation, and real-time communication with parents and staff.",
                 image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&h=200&fit=crop",
                 color: "bg-green-500",
                 icon: BarChart3
               },
               {
-                title: "Digital Learning Platform",
-                description: "Integrated learning management system with virtual classrooms, assignment distribution, online assessments, and collaborative learning tools for modern education.",
+                title: "Secure Communication Hub",
+                description: "Multi-channel communication platform with announcements, PTM scheduling, chat functionality, email integration, and document sharing with role-based access controls.",
                 image: "https://images.unsplash.com/photo-1588072432836-e10032774350?w=300&h=200&fit=crop",
                 color: "bg-yellow-500",
                 icon: Smartphone
@@ -561,21 +561,24 @@ export default function EduLivesLanding() {
           <AnimatedSection className="text-center mt-12 text-white">
             <p className="text-lg mb-6">
               <span className="font-bold text-2xl text-yellow-400">
-                <AnimatedCounter value={50} />+
-              </span> additional modules available in EduLives Complete Suite
+                <AnimatedCounter value={9} />
+              </span> specialized role-based dashboards with 
+              <span className="font-bold text-2xl text-yellow-400 ml-2">
+                <AnimatedCounter value={25} />+
+              </span> integrated modules
             </p>
             <AnimatedButton
               size="lg"
               variant="outline"
               className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white bg-transparent"
             >
-              Explore All Features
+              View Role Dashboards
             </AnimatedButton>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Role-Based Dashboards Section */}
       <section className="py-20 relative overflow-hidden">
         <div 
           className="absolute inset-0 parallax"
@@ -587,43 +590,84 @@ export default function EduLivesLanding() {
         
         <div className="relative container mx-auto px-4 z-10">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Built for Modern Educational Excellence</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Role-Based Dashboards for Every User</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              EduLives is designed with educators, administrators, and students in mind, providing intuitive tools that
-              enhance learning outcomes and operational efficiency.
+              Customized interfaces designed specifically for each role's responsibilities, providing relevant tools, 
+              data, and workflows to maximize productivity and effectiveness.
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: Users,
-                title: "User-Friendly Interface",
-                description: "Intuitive design that requires minimal training. Teachers, administrators, and parents can navigate the system effortlessly, reducing adoption time and increasing productivity from day one.",
+                role: "Principal",
+                responsibilities: "Complete school oversight & approvals",
+                features: ["Institutional analytics", "Multi-level approvals", "Staff performance monitoring", "Financial oversight", "Strategic planning tools"],
                 color: "bg-blue-600"
               },
               {
-                icon: Zap,
-                title: "Scalable & Flexible",
-                description: "Grows with your institution from small schools to large university systems. Modular architecture allows you to add features as needed, ensuring you only pay for what you use.",
+                role: "Vice Principal",
+                responsibilities: "Academic coordination & staff monitoring",
+                features: ["Academic performance tracking", "Teacher evaluation", "Curriculum oversight", "Disciplinary management", "Event coordination"],
                 color: "bg-green-500"
               },
               {
-                icon: Headphones,
-                title: "24/7 Expert Support",
-                description: "Dedicated support team with deep education industry knowledge. Comprehensive training programs, documentation, and ongoing assistance ensure your success with EduLives.",
+                role: "HOD",
+                responsibilities: "Lesson plan review, department reports",
+                features: ["Department analytics", "Lesson plan approval", "Resource allocation", "Subject performance", "Teacher mentoring"],
                 color: "bg-yellow-500"
+              },
+              {
+                role: "Teacher",
+                responsibilities: "Class management, assignment & grade tracking",
+                features: ["Class dashboard", "Assignment creation", "Grade management", "Attendance tracking", "Parent communication"],
+                color: "bg-purple-500"
+              },
+              {
+                role: "Student",
+                responsibilities: "Assignments, results, calendar, resources",
+                features: ["Assignment submission", "Grade access", "Timetable view", "E-learning resources", "Communication portal"],
+                color: "bg-indigo-500"
+              },
+              {
+                role: "Parent",
+                responsibilities: "Child's performance, fee status, communication",
+                features: ["Child's progress", "Fee management", "Communication hub", "Event calendar", "Transport tracking"],
+                color: "bg-pink-500"
+              },
+              {
+                role: "Admin Staff",
+                responsibilities: "Admission, fee, inventory, events, transport",
+                features: ["Admission management", "Fee collection", "Inventory control", "Event planning", "Transport coordination"],
+                color: "bg-red-500"
+              },
+              {
+                role: "IT Admin",
+                responsibilities: "Role control, account creation, system logs",
+                features: ["User management", "System monitoring", "Security logs", "Backup management", "Integration setup"],
+                color: "bg-gray-600"
+              },
+              {
+                role: "Counselor",
+                responsibilities: "Student guidance, behavioral monitoring",
+                features: ["Student counseling", "Behavioral tracking", "Career guidance", "Mental health support", "Parent consultation"],
+                color: "bg-teal-500"
               }
-            ].map((benefit, index) => (
-              <AnimatedCard key={index} delay={index * 0.2} className="text-center p-8 border-0 shadow-lg bg-white">
-                <div className={`w-16 h-16 ${benefit.color} rounded-full mx-auto mb-6 flex items-center justify-center`}>
-                  <benefit.icon className="w-8 h-8 text-white" />
+            ].map((role, index) => (
+              <AnimatedCard key={index} delay={index * 0.1} className="border-0 shadow-lg bg-white overflow-hidden">
+                <div className={`${role.color} p-6 text-white`}>
+                  <h3 className="text-xl font-bold mb-2">{role.role}</h3>
+                  <p className="text-sm opacity-90">{role.responsibilities}</p>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-xl text-gray-900">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{benefit.description}</p>
+                <CardContent className="p-6">
+                  <ul className="space-y-2">
+                    {role.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </AnimatedCard>
             ))}
@@ -867,28 +911,28 @@ export default function EduLivesLanding() {
             <Accordion type="single" collapsible className="space-y-4">
               {[
                 {
-                  question: "What is EduLives School Management Software?",
-                  answer: "EduLives is a comprehensive cloud-based school management platform that automates and streamlines all academic and administrative activities. From student admission to alumni management, EduLives provides a unified solution that helps educational institutions operate more efficiently, reduce administrative overhead, and make data-driven decisions to improve student outcomes."
+                  question: "What role-based dashboards does EduLives provide?",
+                  answer: "EduLives offers 9 specialized dashboards: Principal (institutional oversight), Vice Principal (academic coordination), HOD (department management), Teacher (class management), Student (academic access), Parent (child monitoring), Admin Staff (operational tasks), IT Admin (system management), and Counselor (student guidance). Each dashboard provides role-specific tools, permissions, and workflows tailored to the user's responsibilities."
                 },
                 {
-                  question: "How long does it take to implement EduLives in our school?",
-                  answer: "Most educational institutions can be fully operational with EduLives within 2-4 weeks. Our implementation timeline includes data migration, staff training, system configuration, and testing phases. We provide dedicated implementation specialists, comprehensive training materials, and ongoing support to ensure a smooth transition with minimal disruption to your daily operations."
+                  question: "How does the multi-level approval system work?",
+                  answer: "Our hierarchical approval system allows institutions to set up custom workflows based on their organizational structure. For example, teacher requests go to HOD, then Vice Principal, and finally Principal for approval. Each level can approve, reject, or request modifications with full audit trails and automated notifications to keep all stakeholders informed."
                 },
                 {
-                  question: "Is EduLives suitable for different types of educational institutions?",
-                  answer: "Yes, EduLives is designed to accommodate various educational systems including K-12 schools, colleges, universities, and vocational institutions. Our platform supports multiple curricula including CBSE, ICSE, State Boards, International Baccalaureate (IB), Cambridge, and other international standards. The system can be customized to meet specific institutional requirements and local regulations."
+                  question: "What real-time monitoring features are available?",
+                  answer: "EduLives provides live monitoring of attendance, assignment submissions, grade updates, fee payments, inventory levels, transport tracking, and behavioral incidents. Real-time dashboards show current status, trends, and alerts, enabling immediate intervention when needed. All data is synchronized across devices and user roles."
                 },
                 {
-                  question: "What kind of support and training do you provide?",
-                  answer: "We offer comprehensive 24/7 customer support through multiple channels including phone, email, live chat, and video conferencing. Our support team consists of education technology specialists who understand the unique challenges of educational institutions. We provide on-site training, virtual workshops, detailed documentation, video tutorials, and ongoing professional development sessions."
+                  question: "How comprehensive is the inventory and asset management?",
+                  answer: "Our inventory system tracks all school assets including textbooks, equipment, furniture, and digital resources. Features include barcode scanning, maintenance schedules, depreciation tracking, allocation management, and automated reorder alerts. The system integrates with the finance module for cost tracking and budget management."
                 },
                 {
-                  question: "How secure is our institutional data with EduLives?",
-                  answer: "Data security is our highest priority. EduLives employs bank-level encryption (AES-256), multi-factor authentication, regular security audits, and penetration testing. We comply with international data protection regulations including FERPA, GDPR, COPPA, and other regional privacy laws. All data is stored in secure, geographically distributed cloud servers with automated backups and disaster recovery protocols."
+                  question: "What communication tools are included?",
+                  answer: "EduLives includes a comprehensive communication hub with announcements, PTM scheduling, chat functionality, email integration, document sharing, and video conferencing. All communications are role-based, ensuring users only see relevant information. The system supports multiple languages and can send notifications via SMS, email, and push notifications."
                 },
                 {
-                  question: "Can EduLives integrate with our existing systems and tools?",
-                  answer: "Absolutely. EduLives offers robust integration capabilities with over 50 popular educational tools and services including Google Workspace, Microsoft 365, learning management systems, payment gateways, communication platforms, and third-party applications. Our API allows for custom integrations, and our technical team can assist with connecting your existing systems to ensure seamless data flow."
+                  question: "How does the transport and hostel management work?",
+                  answer: "The transport module includes route optimization, vehicle tracking, driver management, and real-time location sharing with parents. The hostel module manages room allocation, meal planning, visitor logs, and maintenance requests. Both modules integrate with the main system for seamless data flow and communication."
                 }
               ].map((faq, index) => (
                 <motion.div
@@ -927,81 +971,170 @@ export default function EduLivesLanding() {
         
         <div className="relative container mx-auto px-4 text-center z-10">
           <AnimatedSection className="max-w-3xl mx-auto text-white">
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Educational Institution?</h2>
+            <h2 className="text-4xl font-bold mb-6">Ready to Implement Role-Based School Management?</h2>
             <p className="text-xl mb-8 text-gray-200">
-              Join over 50,000 educational institutions worldwide who trust EduLives to streamline their operations,
-              improve student outcomes, and drive institutional excellence. Start your digital transformation journey
-              today.
+              Experience the power of customized dashboards, real-time monitoring, and integrated workflows designed 
+              specifically for educational institutions. Transform your school operations with enterprise-grade 
+              technology tailored to every role.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <AnimatedButton size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
-                Schedule Live Demo
+                Explore Dashboard
               </AnimatedButton>
               <AnimatedButton
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold bg-transparent"
               >
-                Start Free Trial
+                Request Demo
               </AnimatedButton>
             </div>
             <p className="text-sm mt-6 text-gray-300">
-              No credit card required • 30-day free trial • Implementation support included
+              Free consultation • Custom implementation plan • Role-based training included
             </p>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}></div>
+        </div>
+        
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-green-900/20"></div>
+        
+        <div className="relative container mx-auto px-4 z-10">
+          {/* Main Footer Content */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
+            {/* Company Info */}
             <div className="lg:col-span-2">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <Image
-                src="/Edulives-logo.jpg"
-                alt="EduLives Logo"
-                width={150}
-                height={40}
-                className="h-10 w-auto"
-              />
-                <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
-                  Empowering educational institutions worldwide with innovative school management solutions that drive
-                  student success, operational excellence, and institutional growth through technology.
-                </p>
-                {/* <div className="flex space-x-4">
+              <AnimatedSection direction="left" className="space-y-6">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6 }}
+                  className="flex items-center space-x-3"
+                >
+                  <div className="bg-white rounded-lg p-2 shadow-lg">
+                    <Image
+                      src="/Edulives-logo.jpg"
+                      alt="EduLives Logo"
+                      width={180}
+                      height={48}
+                      className="h-12 w-auto"
+                    />
+                  </div>
+                  <motion.div
+                    animate={{ 
+                      boxShadow: [
+                        "0 0 0 rgba(59, 130, 246, 0.4)",
+                        "0 0 20px rgba(59, 130, 246, 0.6)",
+                        "0 0 0 rgba(59, 130, 246, 0.4)"
+                      ]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="w-2 h-2 bg-blue-500 rounded-full"
+                  />
+                </motion.div>
+                
+                <motion.p 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-gray-300 leading-relaxed text-lg max-w-md"
+                >
+                  Enterprise-grade school management platform with role-based dashboards, real-time monitoring, 
+                  multi-level approvals, and integrated modules for academics, finance, inventory, transport, 
+                  and communication.
+                </motion.p>
+                
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="flex items-center space-x-6"
+                >
                   <motion.div 
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="w-10 h-10 bg-blue-600 rounded-lg"
-                  />
+                    whileTap={{ scale: 0.95 }}
+                    className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl flex items-center justify-center cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    </svg>
+                  </motion.div>
                   <motion.div 
                     whileHover={{ scale: 1.1, rotate: -5 }}
-                    className="w-10 h-10 bg-green-500 rounded-lg"
-                  />
+                    whileTap={{ scale: 0.95 }}
+                    className="w-12 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded-xl flex items-center justify-center cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                    </svg>
+                  </motion.div>
                   <motion.div 
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="w-10 h-10 bg-yellow-500 rounded-lg"
-                  />
-                </div> */}
-              </motion.div>
+                    whileTap={{ scale: 0.95 }}
+                    className="w-12 h-12 bg-gradient-to-r from-yellow-600 to-yellow-700 rounded-xl flex items-center justify-center cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                    </svg>
+                  </motion.div>
+                </motion.div>
+              </AnimatedSection>
             </div>
 
+            {/* Footer Links */}
             {[
               {
                 title: "Product",
-                links: ["Features Overview", "Mobile Applications", "System Integrations", "Security & Compliance", "Pricing Plans"]
+                icon: "🚀",
+                links: [
+                  { name: "Features Overview", href: "#features" },
+                  { name: "Mobile Applications", href: "#mobile" },
+                  { name: "System Integrations", href: "#integrations" },
+                  { name: "Security & Compliance", href: "#security" },
+                  { name: "Pricing Plans", href: "#pricing" }
+                ]
               },
               {
                 title: "Resources",
-                links: ["Help Center", "Documentation", "Training Webinars", "Case Studies", "Best Practices"]
+                icon: "📚",
+                links: [
+                  { name: "Help Center", href: "#help" },
+                  { name: "Documentation", href: "#docs" },
+                  { name: "Training Webinars", href: "#training" },
+                  { name: "Case Studies", href: "#cases" },
+                  { name: "Best Practices", href: "#best-practices" }
+                ]
               },
               {
                 title: "Company",
-                links: ["About EduLives", "Career Opportunities", "Contact Support", "Privacy Policy", "Terms of Service"]
+                icon: "🏢",
+                links: [
+                  { name: "About EduLives", href: "#about" },
+                  { name: "Career Opportunities", href: "#careers" },
+                  { name: "Contact Support", href: "#support" },
+                  { name: "Privacy Policy", href: "#privacy" },
+                  { name: "Terms of Service", href: "#terms" }
+                ]
+              },
+              {
+                title: "Support",
+                icon: "🛠️",
+                links: [
+                  { name: "24/7 Live Chat", href: "#chat" },
+                  { name: "Phone Support", href: "#phone" },
+                  { name: "Email Support", href: "#email" },
+                  { name: "Video Tutorials", href: "#tutorials" },
+                  { name: "Implementation Guide", href: "#guide" }
+                ]
               }
             ].map((section, index) => (
               <motion.div
@@ -1009,36 +1142,166 @@ export default function EduLivesLanding() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="space-y-4"
               >
-                <h3 className="font-bold mb-4 text-lg">{section.title}</h3>
-                <ul className="space-y-2 text-gray-400">
-                  {section.links.map((link) => (
-                    <li key={link}>
-                      <Link href="#" className="hover:text-white transition-colors">
-                        {link}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <motion.div 
+                  className="flex items-center space-x-2"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span className="text-2xl">{section.icon}</span>
+                  <h3 className="font-bold text-lg text-white">{section.title}</h3>
+                </motion.div>
+                                 <ul className="space-y-3">
+                   {section.links.map((link, linkIndex) => (
+                     <motion.li 
+                       key={link.name}
+                       initial={{ opacity: 0, x: -20 }}
+                       whileInView={{ opacity: 1, x: 0 }}
+                       transition={{ duration: 0.4, delay: (index * 0.1) + (linkIndex * 0.05) }}
+                     >
+                       <Link 
+                         href={link.href} 
+                         className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                       >
+                         <span className="group-hover:translate-x-1 transition-transform duration-200">
+                           {link.name}
+                         </span>
+                       </Link>
+                     </motion.li>
+                   ))}
+                 </ul>
               </motion.div>
             ))}
           </div>
 
-          <AnimatedDivider className="border-gray-800 mt-12" color="#374151" />
+          {/* Contact & Newsletter Section */}
+          <AnimatedSection className="mb-12">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-6"
+              >
+                <h3 className="text-2xl font-bold text-white">Stay Connected with EduLives</h3>
+                <p className="text-gray-300 text-lg">
+                  Get the latest updates on new features, educational insights, and industry best practices delivered directly to your inbox.
+                </p>
+                <div className="flex items-center space-x-4">
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg p-3"
+                  >
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-green-400 font-semibold">24/7 Support Available</span>
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg p-3"
+                  >
+                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                    <span className="text-blue-400 font-semibold">Live Demo Ready</span>
+                  </motion.div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-4"
+              >
+                <div className="flex space-x-3">
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  />
+                  <motion.button
+                    whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(59, 130, 246, 0.4)" }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    Subscribe
+                  </motion.button>
+                </div>
+                <p className="text-gray-400 text-sm">
+                  Join 50,000+ educators receiving our monthly newsletter. Unsubscribe anytime.
+                </p>
+              </motion.div>
+            </div>
+          </AnimatedSection>
+
+          {/* Animated Divider */}
+          <AnimatedDivider className="border-gray-700" color="#374151" />
           
+          {/* Bottom Footer */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="pt-8 flex flex-col md:flex-row justify-between items-center"
+            className="pt-8 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0"
           >
-            <p className="text-gray-400 text-sm">
-              © 2025 EduLives Technologies. All Rights Reserved. Transforming Education Through Technology.
-            </p>
-            <div className="flex items-center space-x-6 mt-4 md:mt-0">
-              <span className="text-gray-400 text-sm">Contact Sales:</span>
-              <span className="text-white font-semibold">+1-800-EDULIVES</span>
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+              <motion.p 
+                className="text-gray-400 text-sm"
+                whileHover={{ color: "#ffffff" }}
+                transition={{ duration: 0.3 }}
+              >
+                © 2025 EduLives Technologies. All Rights Reserved.
+              </motion.p>
+                             <motion.div
+                 className="flex items-center space-x-4"
+                 initial={{ opacity: 0 }}
+                 whileInView={{ opacity: 1 }}
+                 transition={{ duration: 0.6, delay: 0.2 }}
+               >
+                 <Link href="#privacy" className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">
+                   Privacy Policy
+                 </Link>
+                 <span className="text-gray-600">•</span>
+                 <Link href="#terms" className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">
+                   Terms of Service
+                 </Link>
+                 <span className="text-gray-600">•</span>
+                 <Link href="#cookies" className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">
+                   Cookie Policy
+                 </Link>
+               </motion.div>
             </div>
+            
+            <motion.div 
+              className="flex items-center space-x-6"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className="flex items-center space-x-3">
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    rotate: [0, 5, -5, 0]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="w-3 h-3 bg-green-500 rounded-full"
+                />
+                <span className="text-gray-400 text-sm">Contact Sales:</span>
+                <motion.span 
+                  className="text-white font-bold text-lg"
+                  whileHover={{ color: "#3B82F6" }}
+                  transition={{ duration: 0.3 }}
+                >
+                  +1-800-EDULIVES
+                </motion.span>
+              </div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="px-4 py-2 bg-gradient-to-r from-blue-600/20 to-green-600/20 backdrop-blur-sm border border-white/10 rounded-lg"
+              >
+                <span className="text-white text-sm font-semibold">ISO 27001 Certified</span>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </div>
       </footer>
