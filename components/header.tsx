@@ -56,25 +56,25 @@ export function Header() {
             <Link href="#how-it-works" className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300">
               How It Works
             </Link>
-            <Link href="#pricing" className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300">
-              Pricing
+            <Link href="/roles" className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300">
+              Roles
             </Link>
             <Link href="#testimonials" className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300">
               Testimonials
             </Link>
-            <Link href="#about" className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300">
+            <Link href="/about" className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300">
               About
             </Link>
           </nav>
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-6">
-          <Button
-                  className="btn-modern btn-primary justify-start group text-white"
-                  style={{
-                    background: 'linear-gradient(90deg, #4285C5 0%, #34A853 100%)'
-                  }}
-                >
+            <Button
+              className="btn-modern btn-primary justify-start group text-white"
+              style={{
+                background: 'linear-gradient(90deg, #4285C5 0%, #34A853 100%)'
+              }}
+            >
               Get Started
               <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
@@ -108,11 +108,11 @@ export function Header() {
                 How It Works
               </Link>
               <Link 
-                href="#pricing" 
+                href="/roles" 
                 className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300 py-3 hover:bg-blue-50/50 rounded-2xl px-4"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Pricing
+                Roles
               </Link>
               <Link 
                 href="#testimonials" 
@@ -122,7 +122,7 @@ export function Header() {
                 Testimonials
               </Link>
               <Link 
-                href="#about" 
+                href="/about" 
                 className="text-body font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-300 py-3 hover:bg-blue-50/50 rounded-2xl px-4"
                 onClick={() => setIsMenuOpen(false)}
               >

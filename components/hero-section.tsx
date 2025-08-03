@@ -253,34 +253,57 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Dashboard Tour Video */}
-            <div className={`pb-24 ${isLoaded ? 'fade-in-up' : ''}`}>
+            {/* Dashboard Tour Video - inside a computer frame */}
+            <div className={`pb-60 ${isLoaded ? 'fade-in-up' : ''}`}>
               <div className="flex justify-center">
-                <div className="w-full max-w-6xl rounded-3xl overflow-hidden shadow-2xl border border-neutral-200/60 bg-white/90 backdrop-blur-md font-sans">
-                  <div className="relative aspect-video bg-black flex items-center justify-center">
-                    {/* Fallback image if video fails to load or is blocked */}
-                    <video
-                      className="w-full h-full object-cover"
-                      autoPlay
-                      loop
-                      muted
-                      poster="/images/logo.jpg"
-                    >
-                      <source src="/Tour-web.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
+                <div className="w-full max-w-screen-2xl flex flex-col items-center">
+                  {/* Laptop Frame with Video */}
+                  <div className="relative w-full flex justify-center">
+                    <div className="relative w-full" style={{ maxWidth: 1200 }}>
+                      {/* Laptop image */}
+                      <img
+                        src="/images/laptop.png"
+                        alt="Laptop frame"
+                        className="w-full h-auto block select-none pointer-events-none"
+                        style={{ display: 'block' }}
+                        draggable={false}
+                      />
+                      {/* Video absolutely positioned over the laptop screen area */}
+                      <div
+                        className="absolute"
+                        style={{
+                          // These values may need to be tweaked to fit your laptop.png screen area perfectly
+                          left: '8.2%',
+                          top: '8.5%',
+                          width: '85.5%',
+                          height: '62%',
+                          pointerEvents: 'auto',
+                          overflow: 'hidden',
+                          boxShadow: '0 4px 32px 0 rgba(0,0,0,0.12)'
+                        }}
+                      >
+                        <video
+                          className="w-full h-full object-cover"
+                          autoPlay
+                          loop
+                          muted
+                          poster="/images/logo.jpg"
+                        >
+                          <source src="/Tour-web.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
                   </div>
-                  <div className="p-8 md:p-10 text-center">
-                    <h3 className="text-gradient-primary text-3xl md:text-4xl font-extrabold leading-tight mb-3 font-sans">
+                  {/* Caption and help text */}
+                  <div className="p-10 md:p-16 text-center">
+                    <h3 className="text-gradient-primary text-4xl md:text-5xl font-extrabold leading-tight mb-4 font-sans">
                       See the EduLives Dashboard in Action
                     </h3>
-                    <p className="text-neutral-700 text-lg md:text-xl font-medium font-sans">
+                    <p className="text-neutral-700 text-xl md:text-2xl font-medium font-sans">
                       Watch a quick tour of the all-in-one dashboard for students, teachers, and principals.
                     </p>
-                    <div className="mt-4 text-sm text-neutral-500">
-                      {/*
-                        If the video does not play, provide a download link and troubleshooting tips.
-                      */}
+                    <div className="mt-6 text-base text-neutral-500">
                       <span>
                         Having trouble viewing the video?{" "}
                         <a

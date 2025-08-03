@@ -35,14 +35,41 @@ const steps = [
   },
 ]
 
+const BgPattern = () => (
+  <svg
+    className="absolute inset-0 w-full h-full pointer-events-none z-0"
+    width="100%"
+    height="100%"
+    fill="none"
+    style={{ minHeight: 1200 }}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <pattern
+        id="grid"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+        patternTransform="rotate(2)"
+      >
+        <rect x="0" y="0" width="60" height="60" fill="none" />
+        <path
+          d="M 60 0 L 0 0 0 60"
+          fill="none"
+          stroke="#e0e7ef"
+          strokeWidth="1"
+        />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+);
+
 export function HowItWorksSection() {
   return (
+    
     <section className="py-24 bg-gradient-to-br from-neutral-50 to-blue-50/30 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-100/20 rounded-full blur-3xl"></div>
-      </div>
+      <BgPattern />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
@@ -70,9 +97,9 @@ export function HowItWorksSection() {
 
           <div className="grid lg:grid-cols-4 gap-8 lg:gap-12">
             {steps.map((step, index) => (
-              <div key={index} className="relative group">
+              <div key={index} className="relative group flex flex-col items-stretch">
                 {/* Step card */}
-                <div className="bg-white rounded-2xl p-8 border border-neutral-200/50 shadow-soft hover:shadow-large transition-all duration-300 hover:-translate-y-1 relative z-10">
+                <div className="bg-white rounded-2xl p-8 border border-neutral-200/50 shadow-soft hover:shadow-large transition-all duration-300 hover:-translate-y-1 relative z-10 flex flex-col h-full">
                   {/* Step number */}
                   <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-neutral-900 to-neutral-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-medium">
                     {step.number}
@@ -92,13 +119,22 @@ export function HowItWorksSection() {
                   </p>
                 </div>
 
-                {/* Arrow connector (desktop only) */}
+                {/* Arrow connector */}
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-6 transform -translate-y-1/2 z-20">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-medium border border-neutral-200/50">
-                      <ArrowRight className="w-5 h-5 text-neutral-400" />
+                  <>
+                    {/* Desktop: right arrow */}
+                    <div className="hidden lg:block absolute top-1/2 -right-6 transform -translate-y-1/2 z-20">
+                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-medium border border-neutral-200/50">
+                        <ArrowRight className="w-6 h-6 text-neutral-400" />
+                      </div>
                     </div>
-                  </div>
+                    {/* Mobile: down arrow */}
+                    <div className="lg:hidden flex justify-center">
+                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-medium border border-neutral-200/50 mt-4 mb-0">
+                        <ArrowRight className="w-5 h-5 text-neutral-400 transform rotate-90" />
+                      </div>
+                    </div>
+                  </>
                 )}
               </div>
             ))}
