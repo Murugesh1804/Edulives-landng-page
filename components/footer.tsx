@@ -13,18 +13,12 @@ import {
 
 export function Footer() {
   return (
-    <footer className="footer-modern relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto container-padding py-24 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand section */}
-          <div className="flex flex-col items-center lg:items-start space-y-8 text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start space-x-4">
+          <div className="space-y-6">
+            <div className="flex items-center space-x-3">
               <Image
                 src="/images/edulives-logo.png"
                 alt="EduLives Logo"
@@ -33,108 +27,96 @@ export function Footer() {
                 className="object-contain w-12 h-12"
                 priority
               />
-              <span className="text-2xl font-bold text-white">EduLives</span>
+              <span className="text-xl font-bold">EduLives</span>
             </div>
-            <p className="text-body text-neutral-300 max-w-sm leading-relaxed">
-              Empowering educational institutions with comprehensive management solutions that evolve seamlessly with
-              your needs. Transform your school's operations today.
+            <p className="text-gray-300 leading-relaxed">
+              Empowering educational institutions with comprehensive school management solutions. 
+              Transform your school's operations with role-based dashboards and real-time insights.
             </p>
-            <div className="flex justify-center lg:justify-start space-x-4">
-              <Link href="#" className="w-12 h-12 bg-neutral-800 rounded-2xl flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-700 transition-all duration-300 hover-lift">
-                <Facebook className="w-6 h-6" />
+            <div className="flex space-x-4">
+              <Link href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-300">
+                <Facebook className="w-5 h-5" />
               </Link>
-              <Link href="#" className="w-12 h-12 bg-neutral-800 rounded-2xl flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-700 transition-all duration-300 hover-lift">
-                <Twitter className="w-6 h-6" />
+              <Link href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-300">
+                <Twitter className="w-5 h-5" />
               </Link>
-              <Link href="#" className="w-12 h-12 bg-neutral-800 rounded-2xl flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-700 transition-all duration-300 hover-lift">
-                <Linkedin className="w-6 h-6" />
+              <Link href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-300">
+                <Linkedin className="w-5 h-5" />
               </Link>
-              <Link href="#" className="w-12 h-12 bg-neutral-800 rounded-2xl flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-700 transition-all duration-300 hover-lift">
-                <Instagram className="w-6 h-6" />
+              <Link href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-300">
+                <Instagram className="w-5 h-5" />
               </Link>
             </div>
           </div>
 
           {/* Product links */}
-          <div className="flex flex-col items-center lg:items-start">
-            <h3 className="text-white font-semibold mb-8 text-xl">Product</h3>
-            <ul className="space-y-6">
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold">Product</h3>
+            <ul className="space-y-4">
               <li>
-                <Link href="#features" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Link href="#features" className="text-gray-300 hover:text-white transition-colors duration-300">
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="#how-it-works" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Link href="#roles" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  Role-Based Dashboards
+                </Link>
+              </li>
+              <li>
+                <Link href="#how-it-works" className="text-gray-300 hover:text-white transition-colors duration-300">
                   How It Works
                 </Link>
               </li>
               <li>
-                <Link href="#pricing" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Pricing
+                <Link href="#pricing" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  Pricing & Plans
                 </Link>
               </li>
               <li>
-                <Link href="#testimonials" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Testimonials
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
                   Mobile App
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Integrations
+                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  API & Integrations
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Company links */}
-          <div className="flex flex-col items-center lg:items-start">
-            <h3 className="text-white font-semibold mb-8 text-xl">Company</h3>
-            <ul className="space-y-6">
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold">Company</h3>
+            <ul className="space-y-4">
               <li>
-                <Link href="#about" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Link href="#about" className="text-gray-300 hover:text-white transition-colors duration-300">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Careers
+                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  Case Studies
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
                   Press
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
                   Partners
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-body text-neutral-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <ArrowRight className="w-5 h-5 mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Link href="#contact" className="text-gray-300 hover:text-white transition-colors duration-300">
                   Contact
                 </Link>
               </li>
@@ -142,29 +124,27 @@ export function Footer() {
           </div>
 
           {/* Contact info */}
-          <div className="flex flex-col items-center lg:items-start">
-            <h3 className="text-white font-semibold mb-8 text-xl">Contact Info</h3>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 text-neutral-400 mt-1 flex-shrink-0" />
-                <span className="text-body text-neutral-300 leading-relaxed">
-                  123 Education Street
-                  <br />
-                  Tech City, TC 12345
-                  <br />
-                  India
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold">Contact Info</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />
+                <div className="text-gray-300">
+                  <div>EduLives Technologies</div>
+                  <div>Tech Park, Bangalore</div>
+                  <div>Karnataka, India</div>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                <span className="text-gray-300 hover:text-white transition-colors duration-300">
+                  +91 8047 0918 07
                 </span>
               </div>
-              <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6 text-neutral-400 flex-shrink-0" />
-                <span className="text-body text-neutral-300 hover:text-white transition-colors duration-300">
-                  +91 98765 43210
-                </span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Mail className="w-6 h-6 text-neutral-400 flex-shrink-0" />
-                <span className="text-body text-neutral-300 hover:text-white transition-colors duration-300">
-                  hello@edulives.com
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                <span className="text-gray-300 hover:text-white transition-colors duration-300">
+                  info@edulives.com
                 </span>
               </div>
             </div>
@@ -172,18 +152,18 @@ export function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="divider-modern mt-20 pt-12 flex flex-col md:flex-row md:justify-between md:items-center items-center text-center gap-6 md:gap-0">
-          <p className="text-body text-neutral-400">
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0">
+          <p className="text-gray-400">
             © {new Date().getFullYear()} EduLives. All rights reserved.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-12">
-            <Link href="#" className="text-body text-neutral-400 hover:text-white transition-colors duration-300">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+            <Link href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-body text-neutral-400 hover:text-white transition-colors duration-300">
+            <Link href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
               Terms of Service
             </Link>
-            <Link href="#" className="text-body text-neutral-400 hover:text-white transition-colors duration-300">
+            <Link href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
               Cookie Policy
             </Link>
           </div>

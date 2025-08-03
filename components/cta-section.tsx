@@ -1,81 +1,135 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Phone, Mail, Zap, Shield, Users } from "lucide-react"
+import { ArrowRight, Calendar, Phone, Mail, CheckCircle } from "lucide-react"
 
 export function CTASection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center space-y-8">
+    <section id="contact" className="py-20 bg-blue-600">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
           {/* Main CTA */}
-          <div className="space-y-6">
-            <h2 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-              Ready to Transform Your{" "}
-              <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                School Management?
-              </span>
+          <div className="mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+              Ready to Transform Your School Management?
             </h2>
-            <p className="text-xl lg:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-              Join hundreds of schools already using EduLives to streamline their operations and improve educational
-              outcomes. Start your free trial today and experience the difference.
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-12">
+              Join 500+ schools already using EduLives to streamline operations, 
+              enhance communication, and improve student outcomes.
             </p>
           </div>
 
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white px-12 py-6 text-lg font-semibold shadow-large hover:shadow-glow transition-all duration-300 group"
-            >
-              Start Free Trial
-              <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
-            </Button>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Button
               size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white hover:text-blue-600 bg-white/10 backdrop-blur-sm px-12 py-6 text-lg font-semibold shadow-soft"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Schedule Demo
+              <Calendar className="mr-2 h-5 w-5" />
+              Request Live Demo
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
+            >
+              <Phone className="mr-2 h-5 w-5" />
+              Talk to Sales
             </Button>
           </div>
 
-          {/* Trust indicators */}
-          <div className="grid md:grid-cols-3 gap-8 pt-12">
-            <div className="flex items-center justify-center space-x-3 text-blue-100">
-              <Zap className="w-6 h-6 text-yellow-300" />
-              <span className="text-lg font-medium">Setup in 2 hours</span>
+          {/* Benefits Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 rounded-lg p-8 border border-white/20">
+              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                <CheckCircle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Free Trial</h3>
+              <p className="text-blue-100">
+                Start with a 30-day free trial. No credit card required. 
+                Experience the full platform with your school data.
+              </p>
             </div>
-            <div className="flex items-center justify-center space-x-3 text-blue-100">
-              <Shield className="w-6 h-6 text-green-300" />
-              <span className="text-lg font-medium">99.9% uptime</span>
+            <div className="bg-white/10 rounded-lg p-8 border border-white/20">
+              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                <Calendar className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Live Demo</h3>
+              <p className="text-blue-100">
+                Book a personalized demo with our education experts. 
+                See how EduLives fits your specific needs.
+              </p>
             </div>
-            <div className="flex items-center justify-center space-x-3 text-blue-100">
-              <Users className="w-6 h-6 text-purple-300" />
-              <span className="text-lg font-medium">500+ schools trust us</span>
+            <div className="bg-white/10 rounded-lg p-8 border border-white/20">
+              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                <Phone className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Expert Support</h3>
+              <p className="text-blue-100">
+                Get dedicated support during implementation and beyond. 
+                Our team ensures your success.
+              </p>
             </div>
           </div>
 
-          {/* Contact info */}
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-12 border-t border-white/20">
-            <div className="flex items-center space-x-3 text-blue-100 hover:text-white transition-colors duration-300">
-              <Phone className="w-5 h-5" />
-              <span className="font-medium">+91 98765 43210</span>
-            </div>
-            <div className="flex items-center space-x-3 text-blue-100 hover:text-white transition-colors duration-300">
-              <Mail className="w-5 h-5" />
-              <span className="font-medium">hello@edulives.com</span>
+          {/* Contact Information */}
+          <div className="bg-white/10 rounded-lg p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-6">Get Started Today</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="text-left">
+                <h4 className="text-lg font-semibold text-white mb-4">Contact Information</h4>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-4">
+                    <Phone className="w-5 h-5 text-blue-200" />
+                    <span className="text-blue-100">+91 8047 0918 07</span>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <Mail className="w-5 h-5 text-blue-200" />
+                    <span className="text-blue-100">info@edulives.com</span>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <Calendar className="w-5 h-5 text-blue-200" />
+                    <span className="text-blue-100">Available Mon-Fri, 9 AM - 6 PM IST</span>
+                  </div>
+                </div>
+              </div>
+              <div className="text-left">
+                <h4 className="text-lg font-semibold text-white mb-4">What You'll Get</h4>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-300" />
+                    <span className="text-blue-100">Personalized demo of your use case</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-300" />
+                    <span className="text-blue-100">Implementation roadmap</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-300" />
+                    <span className="text-blue-100">Pricing tailored to your needs</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-300" />
+                    <span className="text-blue-100">Migration support included</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Bottom trust badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-blue-100 text-sm font-medium">Live chat available 24/7</span>
+          {/* Trust Indicators */}
+          <div className="mt-16">
+            <p className="text-blue-200 text-lg mb-8">
+              Trusted by leading educational institutions across India
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-8">
+              <div className="text-blue-200 text-sm">CBSE Schools</div>
+              <div className="text-blue-200 text-sm">ICSE Schools</div>
+              <div className="text-blue-200 text-sm">International Schools</div>
+              <div className="text-blue-200 text-sm">State Board Schools</div>
+              <div className="text-blue-200 text-sm">Universities</div>
+            </div>
           </div>
         </div>
       </div>

@@ -6,11 +6,12 @@ import { ComparisonSection } from "@/components/comparison-section"
 import { RolesSection } from "@/components/roles-section"
 import { InventorySection } from "@/components/inventory-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
+import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-blue-50/30 to-purple-50/30">
+    <div className="min-h-screen bg-white">
       <Header />
       <HeroSection />
       <FeaturesSection />
@@ -19,6 +20,7 @@ export default function HomePage() {
       <RolesSection />
       <InventorySection />
       <TestimonialsSection />
+      <CTASection />
       <Footer />
     </div>
   )
