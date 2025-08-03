@@ -1,171 +1,136 @@
 import Link from "next/link"
 import Image from "next/image"
-import {
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Mail,
-  Phone,
-  MapPin,
-  ArrowRight,
-} from "lucide-react"
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand section */}
-          <div className="space-y-6">
+    <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-bl from-blue-900/20 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main Footer Content */}
+        <div className="grid lg:grid-cols-4 gap-12 mb-12">
+          {/* Company Info */}
+          <div className="lg:col-span-1 space-y-6">
             <div className="flex items-center space-x-3">
               <Image
-                src="/images/edulives-logo.png"
+                src="/images/logo_white.png"
                 alt="EduLives Logo"
-                width={48}
-                height={48}
-                className="object-contain w-12 h-12"
+                width={180}
+                height={45}
+                className="object-contain"
                 priority
               />
-              <span className="text-xl font-bold">EduLives</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Empowering educational institutions with comprehensive school management solutions. 
-              Transform your school's operations with role-based dashboards and real-time insights.
+              Empowering educational institutions with simple, effective management solutions. 
+              Transform your school operations with our comprehensive platform.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-300">
+              <Link href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300">
                 <Facebook className="w-5 h-5" />
               </Link>
-              <Link href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-300">
+              <Link href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300">
                 <Twitter className="w-5 h-5" />
               </Link>
-              <Link href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-300">
+              <Link href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300">
                 <Linkedin className="w-5 h-5" />
               </Link>
-              <Link href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-300">
+              <Link href="#" className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300">
                 <Instagram className="w-5 h-5" />
               </Link>
             </div>
           </div>
 
-          {/* Product links */}
+          {/* Product Links */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold">Product</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="#features" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link href="#roles" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Role-Based Dashboards
-                </Link>
-              </li>
-              <li>
-                <Link href="#how-it-works" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  How It Works
-                </Link>
-              </li>
-              <li>
-                <Link href="#pricing" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Pricing & Plans
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Mobile App
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  API & Integrations
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company links */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-semibold">Company</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="#about" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Press
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Partners
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact info */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-semibold">Contact Info</h3>
+            <h3 className="text-lg font-semibold text-white">Product</h3>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />
-                <div className="text-gray-300">
-                  <div>EduLives Technologies</div>
-                  <div>Tech Park, Bangalore</div>
-                  <div>Karnataka, India</div>
-                </div>
+              <Link href="#" className="block text-gray-300 hover:text-white transition-colors duration-300">
+                Features
+              </Link>
+              <Link href="#" className="block text-gray-300 hover:text-white transition-colors duration-300">
+                Pricing
+              </Link>
+              <Link href="#" className="block text-gray-300 hover:text-white transition-colors duration-300">
+                Demo
+              </Link>
+              <Link href="#" className="block text-gray-300 hover:text-white transition-colors duration-300">
+                Integrations
+              </Link>
+              <Link href="#" className="block text-gray-300 hover:text-white transition-colors duration-300">
+                API
+              </Link>
+            </div>
+          </div>
+
+          {/* Company Links */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold text-white">Company</h3>
+            <div className="space-y-4">
+              <Link href="#" className="block text-gray-300 hover:text-white transition-colors duration-300">
+                About Us
+              </Link>
+              <Link href="#" className="block text-gray-300 hover:text-white transition-colors duration-300">
+                Careers
+              </Link>
+              <Link href="#" className="block text-gray-300 hover:text-white transition-colors duration-300">
+                Blog
+              </Link>
+              <Link href="#" className="block text-gray-300 hover:text-white transition-colors duration-300">
+                Press
+              </Link>
+              <Link href="#" className="block text-gray-300 hover:text-white transition-colors duration-300">
+                Partners
+              </Link>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold text-white">Contact</h3>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">+91 8047 0918 07</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                <span className="text-gray-300 hover:text-white transition-colors duration-300">
-                  +91 8047 0918 07
-                </span>
+                <Mail className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">info@edulives.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                <span className="text-gray-300 hover:text-white transition-colors duration-300">
-                  info@edulives.com
-                </span>
+                <MapPin className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">Mumbai, India</span>
               </div>
+            </div>
+            <div className="pt-4">
+              <Link 
+                href="#" 
+                className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Bottom section */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0">
-          <p className="text-gray-400">
-            © {new Date().getFullYear()} EduLives. All rights reserved.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
-            <Link href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-              Cookie Policy
-            </Link>
+        {/* Divider */}
+        <div className="border-t border-gray-700 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex flex-wrap items-center space-x-6 text-sm text-gray-400">
+              <Link href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</Link>
+              <Link href="#" className="hover:text-white transition-colors duration-300">Terms of Service</Link>
+              <Link href="#" className="hover:text-white transition-colors duration-300">Cookie Policy</Link>
+              <Link href="#" className="hover:text-white transition-colors duration-300">Security</Link>
+            </div>
+            <p className="text-sm text-gray-400">
+              © {new Date().getFullYear()} EduLives. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
