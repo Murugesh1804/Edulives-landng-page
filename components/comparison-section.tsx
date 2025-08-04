@@ -63,10 +63,41 @@ const comparisonData = [
   },
 ]
 
+const BgPattern = () => (
+  <svg
+    className="absolute inset-0 w-full h-full pointer-events-none z-0"
+    width="100%"
+    height="100%"
+    fill="none"
+    style={{ minHeight: 1200 }}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <pattern
+        id="grid"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+        patternTransform="rotate(2)"
+      >
+        <rect x="0" y="0" width="60" height="60" fill="none" />
+        <path
+          d="M 60 0 L 0 0 0 60"
+          fill="none"
+          stroke="#e0e7ef"
+          strokeWidth="1"
+        />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+);
+
 export function ComparisonSection() {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      {/* Background decorative elements */}
+      <BgPattern />
+
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-green-100/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-blue-100/30 rounded-full blur-3xl"></div>
@@ -81,7 +112,15 @@ export function ComparisonSection() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 leading-tight">
             Better Than{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span
+              className="bg-clip-text text-transparent"
+              style={{
+                background: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #059669 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
               Traditional Solutions
             </span>
           </h2>
@@ -92,10 +131,10 @@ export function ComparisonSection() {
         </div>
 
         {/* Comparison table */}
-        <div className="bg-white rounded-3xl shadow-large border border-neutral-200/50 overflow-hidden">
+        <div className="bg-white rounded-3xl shadow-large border border-neutral-200/50 overflow-x-auto">
           {/* Table header */}
           <div className="bg-gradient-to-r from-neutral-50 to-blue-50/30 px-8 py-6 border-b border-neutral-200/50">
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               <div className="text-left">
                 <h3 className="text-lg font-semibold text-neutral-900">Feature</h3>
               </div>
@@ -112,7 +151,7 @@ export function ComparisonSection() {
           <div className="divide-y divide-neutral-200/50">
             {comparisonData.map((item, index) => (
               <div key={index} className="px-8 py-6 hover:bg-neutral-50/50 transition-colors duration-200">
-                <div className="grid grid-cols-3 gap-8 items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-center">
                   <div className="text-left">
                     <h4 className="font-medium text-neutral-900">{item.feature}</h4>
                   </div>

@@ -205,7 +205,7 @@ export function FeaturesSection() {
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-purple-400/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-gradient-to-br from-green-400/20 to-blue-400/10 rounded-full blur-2xl"></div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-6 py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
           <div
             className={`text-center transform transition-all duration-1000 ${
               isVisible
@@ -220,13 +220,13 @@ export function FeaturesSection() {
                 </span>
               </div>
             </div>
-            <h1 className="text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-8 drop-shadow-lg">
+            <h1 className="text-3xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-4 sm:mb-8 drop-shadow-lg">
               School Management
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                 Built for Humans
               </span>
             </h1>
-            <p className="text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-14 font-medium">
+            <p className="text-base sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-14 font-medium">
               Every feature designed around real people, real situations, and
               real needs. See how EduLives transforms daily school life for
               students, teachers, parents, and administrators.
@@ -239,7 +239,7 @@ export function FeaturesSection() {
                   alt="Happy students and teachers using EduLives system"
                   width={800}
                   height={500}
-                  className="w-full h-auto"
+                  className="w-full h-auto max-h-60 sm:max-h-96"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-700/10 via-transparent to-transparent"></div>
@@ -280,11 +280,11 @@ export function FeaturesSection() {
       </section>
 
       {/* Story-Based Features */}
-      <section className="py-24 relative z-10">
+      <section className="py-16 sm:py-24 relative z-10">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90vw] h-32 bg-gradient-to-r from-blue-100/40 via-purple-100/30 to-indigo-100/40 blur-2xl"></div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-extrabold text-gray-900 mb-6 drop-shadow">
               A Day in the Life
@@ -294,7 +294,7 @@ export function FeaturesSection() {
               challenges
             </p>
           </div>
-          <div className="space-y-32">
+          <div className="space-y-16 sm:space-y-32">
             {stories.map((story, index) => (
               <div
                 key={story.id}
@@ -307,7 +307,7 @@ export function FeaturesSection() {
                 }`}
               >
                 <div
-                  className={`flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24 ${
+                  className={`flex flex-col-reverse lg:flex-row items-center gap-8 sm:gap-16 lg:gap-24 ${
                     index % 2 === 0
                       ? "lg:flex-row"
                       : "lg:flex-row-reverse"
@@ -323,10 +323,10 @@ export function FeaturesSection() {
                           {story.subtitle}
                         </div>
                       </div>
-                      <h3 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight drop-shadow">
+                      <h3 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight drop-shadow">
                         {story.title}
                       </h3>
-                      <p className="text-xl text-gray-700 leading-relaxed font-medium">
+                      <p className="text-base sm:text-xl text-gray-700 leading-relaxed font-medium">
                         {story.narrative}
                       </p>
                       <div className="space-y-4">
@@ -385,12 +385,12 @@ export function FeaturesSection() {
       </section>
 
       {/* Quick Features Grid */}
-      <section className="py-24 bg-gradient-to-br from-blue-50/60 via-white/80 to-purple-50/60 relative z-10">
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-blue-50/60 via-white/80 to-purple-50/60 relative z-10">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-br from-green-400/10 to-blue-400/10 rounded-full blur-2xl"></div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold text-gray-900 mb-6 drop-shadow">
               More Ways We Help
@@ -399,7 +399,7 @@ export function FeaturesSection() {
               Every detail designed to make school life better
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
             {quickFeatures.map((feature, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-blue-100/30">
@@ -430,11 +430,11 @@ export function FeaturesSection() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 relative z-10">
+      <section className="py-16 sm:py-24 relative z-10">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90vw] h-32 bg-gradient-to-r from-blue-100/40 via-purple-100/30 to-indigo-100/40 blur-2xl"></div>
         </div>
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold text-gray-900 mb-6 drop-shadow">
               Real People, Real Stories
@@ -444,7 +444,7 @@ export function FeaturesSection() {
               EduLives daily
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}

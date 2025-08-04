@@ -90,7 +90,7 @@ const trustMetrics = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-28 bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden">
+    <section id="testimonials" className="py-28 bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden">
       {/* Subtle background pattern */}
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none z-0"
@@ -132,7 +132,12 @@ export function TestimonialsSection() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-black text-gray-900 leading-tight tracking-tight">
             Trusted by{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+            <span               style={{
+                background: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #059669 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}>
               Educational Leaders
             </span>
           </h2>
