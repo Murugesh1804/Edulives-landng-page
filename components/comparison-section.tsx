@@ -1,208 +1,165 @@
-import { CheckCircle, XCircle, Star } from "lucide-react"
+import React from "react"
 
 const comparisonData = [
   {
     feature: "Setup Time",
     traditional: "2-4 weeks",
     edulives: "2 hours",
-    edulivesBetter: true,
   },
   {
     feature: "Technical Expertise Required",
     traditional: "High",
     edulives: "None",
-    edulivesBetter: true,
   },
   {
     feature: "Data Migration",
     traditional: "Manual, error-prone",
     edulives: "Automated, 99.9% accurate",
-    edulivesBetter: true,
   },
   {
     feature: "Mobile Access",
     traditional: "Limited or none",
     edulives: "Full mobile app",
-    edulivesBetter: true,
   },
   {
     feature: "Real-time Updates",
     traditional: "Delayed sync",
     edulives: "Instant sync",
-    edulivesBetter: true,
   },
   {
     feature: "Security",
     traditional: "Basic",
     edulives: "Enterprise-grade",
-    edulivesBetter: true,
   },
   {
     feature: "Support",
     traditional: "Limited hours",
     edulives: "24/7 support",
-    edulivesBetter: true,
   },
   {
     feature: "Updates & Maintenance",
     traditional: "Manual, disruptive",
     edulives: "Automatic, seamless",
-    edulivesBetter: true,
   },
   {
     feature: "Cost",
     traditional: "High upfront + ongoing",
     edulives: "Predictable monthly",
-    edulivesBetter: true,
   },
   {
     feature: "Scalability",
     traditional: "Limited",
     edulives: "Unlimited",
-    edulivesBetter: true,
   },
 ]
 
-const BgPattern = () => (
-  <svg
-    className="absolute inset-0 w-full h-full pointer-events-none z-0"
-    width="100%"
-    height="100%"
-    fill="none"
-    style={{ minHeight: 1200 }}
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <defs>
-      <pattern
-        id="grid"
-        width="60"
-        height="60"
-        patternUnits="userSpaceOnUse"
-        patternTransform="rotate(2)"
-      >
-        <rect x="0" y="0" width="60" height="60" fill="none" />
-        <path
-          d="M 60 0 L 0 0 0 60"
-          fill="none"
-          stroke="#e0e7ef"
-          strokeWidth="1"
-        />
-      </pattern>
-    </defs>
-    <rect width="100%" height="100%" fill="url(#grid)" />
-  </svg>
-);
-
 export function ComparisonSection() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      <BgPattern />
-
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-green-100/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-blue-100/30 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="relative py-16 sm:py-24 bg-gradient-to-br from-blue-50 via-white to-green-50 overflow-hidden">
+      <div className="absolute top-0 left-0 w-40 h-40 bg-blue-100/40 rounded-full blur-2xl -z-10"></div>
+      <div className="absolute bottom-0 right-0 w-40 h-40 bg-green-100/40 rounded-full blur-2xl -z-10"></div>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
-        <div className="text-center space-y-6 mb-20">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-50 text-green-700 text-sm font-medium">
-            <Star className="w-4 h-4 mr-2" />
+        <div className="text-center mb-12">
+          <span className="inline-block px-4 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold tracking-wide mb-3">
             Why Choose EduLives
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 leading-tight">
-            Better Than{" "}
-            <span
-              className="bg-clip-text text-transparent"
-              style={{
-                background: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #059669 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Traditional Solutions
-            </span>
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-neutral-900 mb-4 leading-tight">
+            EduLives vs. Traditional Solutions
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            See how our modern cloud-based platform outperforms traditional school management systems 
-            in every aspect that matters to your institution.
+          <p className="text-base sm:text-lg text-neutral-600 max-w-2xl mx-auto">
+            Discover how EduLives outperforms legacy school management systems in every way that matters.
           </p>
         </div>
 
-        {/* Comparison table */}
-        <div className="bg-white rounded-3xl shadow-large border border-neutral-200/50 overflow-x-auto">
-          {/* Table header */}
-          <div className="bg-gradient-to-r from-neutral-50 to-blue-50/30 px-8 py-6 border-b border-neutral-200/50">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              <div className="text-left">
-                <h3 className="text-lg font-semibold text-neutral-900">Feature</h3>
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-semibold text-neutral-600">Traditional Systems</h3>
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-semibold text-blue-600">EduLives</h3>
-              </div>
+        {/* Side-by-side Comparison Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Traditional Card */}
+          <div className="flex flex-col bg-white rounded-3xl shadow-lg border border-blue-100 p-8 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-100 rounded-t-3xl" />
+            <div className="flex items-center gap-3 mb-6">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-700 text-2xl font-bold shadow">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6l4 2" /></svg>
+              </span>
+              <span className="text-2xl font-extrabold text-blue-700 tracking-tight">Traditional</span>
             </div>
+            <table className="w-full text-left">
+              <thead>
+                <tr>
+                  <th className="text-xs uppercase text-neutral-400 font-semibold pb-2">Feature</th>
+                  <th className="text-xs uppercase text-neutral-400 font-semibold pb-2">Traditional</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonData.map((item, idx) => (
+                  <tr key={item.feature} className={idx % 2 === 0 ? "bg-blue-50/30" : ""}>
+                    <td className="py-3 pr-4 font-medium text-neutral-700">{item.feature}</td>
+                    <td className="py-3 font-semibold text-blue-800">{item.traditional}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-
-          {/* Table body */}
-          <div className="divide-y divide-neutral-200/50">
-            {comparisonData.map((item, index) => (
-              <div key={index} className="px-8 py-6 hover:bg-neutral-50/50 transition-colors duration-200">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-center">
-                  <div className="text-left">
-                    <h4 className="font-medium text-neutral-900">{item.feature}</h4>
-                  </div>
-                  <div className="text-center">
-                    <div className="flex items-center justify-center space-x-2">
-                      <XCircle className="w-5 h-5 text-red-500" />
-                      <span className="text-neutral-600">{item.traditional}</span>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="flex items-center justify-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
-                      <span className="font-medium text-neutral-900">{item.edulives}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Table footer */}
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50/30 px-8 py-6 border-t border-neutral-200/50">
-            <div className="text-center">
-              <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-soft border border-neutral-200/50">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span className="font-semibold text-neutral-900">EduLives wins in all categories</span>
-              </div>
+          {/* EduLives Card */}
+          <div className="flex flex-col bg-white rounded-3xl shadow-lg border border-green-100 p-8 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 via-green-300 to-green-100 rounded-t-3xl" />
+            <div className="flex items-center gap-3 mb-6">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-100 text-green-700 text-2xl font-bold shadow">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+              </span>
+              <span className="text-2xl font-extrabold text-green-700 tracking-tight">EduLives</span>
             </div>
+            <table className="w-full text-left">
+              <thead>
+                <tr>
+                  <th className="text-xs uppercase text-neutral-400 font-semibold pb-2">Feature</th>
+                  <th className="text-xs uppercase text-neutral-400 font-semibold pb-2">EduLives</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonData.map((item, idx) => (
+                  <tr key={item.feature} className={idx % 2 === 0 ? "bg-green-50/30" : ""}>
+                    <td className="py-3 pr-4 font-medium text-neutral-700">{item.feature}</td>
+                    <td className="py-3 font-semibold text-green-800">{item.edulives}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center space-x-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl px-8 py-6 shadow-soft border border-neutral-200/50">
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-              <span className="text-sm font-medium text-neutral-700">10x faster setup</span>
-            </div>
-            <div className="w-px h-6 bg-neutral-300"></div>
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-              <span className="text-sm font-medium text-neutral-700">99.9% uptime</span>
-            </div>
-            <div className="w-px h-6 bg-neutral-300"></div>
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-              <span className="text-sm font-medium text-neutral-700">50% cost savings</span>
-            </div>
+        {/* Summary/Highlight */}
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex-1 bg-blue-100/60 rounded-xl px-6 py-4 text-center shadow-sm">
+            <div className="text-lg font-bold text-blue-700">10x Faster Setup</div>
+            <div className="text-xs text-blue-900 mt-1">Get started in hours, not weeks</div>
+          </div>
+          <div className="flex-1 bg-green-100/60 rounded-xl px-6 py-4 text-center shadow-sm">
+            <div className="text-lg font-bold text-green-700">99.9% Uptime</div>
+            <div className="text-xs text-green-900 mt-1">Reliable and always available</div>
+          </div>
+          <div className="flex-1 bg-purple-100/60 rounded-xl px-6 py-4 text-center shadow-sm">
+            <div className="text-lg font-bold text-purple-700">50% Cost Savings</div>
+            <div className="text-xs text-purple-900 mt-1">Save on operations & IT</div>
+          </div>
+        </div>
+
+        {/* Mobile summary stacked */}
+        <div className="sm:hidden mt-8 flex flex-col gap-3">
+          <div className="bg-blue-100/60 rounded-xl px-4 py-3 text-center">
+            <div className="text-base font-bold text-blue-700">10x Faster Setup</div>
+            <div className="text-xs text-blue-900 mt-1">Get started in hours, not weeks</div>
+          </div>
+          <div className="bg-green-100/60 rounded-xl px-4 py-3 text-center">
+            <div className="text-base font-bold text-green-700">99.9% Uptime</div>
+            <div className="text-xs text-green-900 mt-1">Reliable and always available</div>
+          </div>
+          <div className="bg-purple-100/60 rounded-xl px-4 py-3 text-center">
+            <div className="text-base font-bold text-purple-700">50% Cost Savings</div>
+            <div className="text-xs text-purple-900 mt-1">Save on operations & IT</div>
           </div>
         </div>
       </div>
     </section>
   )
-} 
+}
