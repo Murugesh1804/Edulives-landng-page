@@ -56,12 +56,12 @@ const comparisonData = [
 export function ComparisonSection() {
   return (
     <section className="relative py-16 sm:py-24 bg-gradient-to-br from-blue-50 via-white to-green-50 overflow-hidden">
-      <div className="absolute top-0 left-0 w-40 h-40 bg-blue-100/40 rounded-full blur-2xl -z-10"></div>
-      <div className="absolute bottom-0 right-0 w-40 h-40 bg-green-100/40 rounded-full blur-2xl -z-10"></div>
+      <div className="absolute top-0 left-0 w-40 h-40 bg-blue-100/30 rounded-full blur-2xl -z-10"></div>
+      <div className="absolute bottom-0 right-0 w-40 h-40 bg-green-100/30 rounded-full blur-2xl -z-10"></div>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold tracking-wide mb-3">
+          <span className="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold tracking-wide mb-3">
             Why Choose EduLives
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-neutral-900 mb-4 leading-tight">
@@ -130,33 +130,33 @@ export function ComparisonSection() {
 
         {/* Summary/Highlight */}
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <div className="flex-1 bg-blue-100/60 rounded-xl px-6 py-4 text-center shadow-sm">
+          <div className="flex-1 bg-blue-100/50 rounded-xl px-6 py-4 text-center shadow-sm">
             <div className="text-lg font-bold text-blue-700">10x Faster Setup</div>
             <div className="text-xs text-blue-900 mt-1">Get started in hours, not weeks</div>
           </div>
-          <div className="flex-1 bg-green-100/60 rounded-xl px-6 py-4 text-center shadow-sm">
+          <div className="flex-1 bg-green-100/50 rounded-xl px-6 py-4 text-center shadow-sm">
             <div className="text-lg font-bold text-green-700">99.9% Uptime</div>
             <div className="text-xs text-green-900 mt-1">Reliable and always available</div>
           </div>
-          <div className="flex-1 bg-purple-100/60 rounded-xl px-6 py-4 text-center shadow-sm">
-            <div className="text-lg font-bold text-purple-700">50% Cost Savings</div>
-            <div className="text-xs text-purple-900 mt-1">Save on operations & IT</div>
+          <div className="flex-1 bg-orange-100/50 rounded-xl px-6 py-4 text-center shadow-sm">
+            <div className="text-lg font-bold text-orange-700">50% Cost Savings</div>
+            <div className="text-xs text-orange-900 mt-1">Save on operations & IT</div>
           </div>
         </div>
 
         {/* Mobile summary stacked */}
         <div className="sm:hidden mt-8 flex flex-col gap-3">
-          <div className="bg-blue-100/60 rounded-xl px-4 py-3 text-center">
+          <div className="bg-blue-100/50 rounded-xl px-4 py-3 text-center">
             <div className="text-base font-bold text-blue-700">10x Faster Setup</div>
             <div className="text-xs text-blue-900 mt-1">Get started in hours, not weeks</div>
           </div>
-          <div className="bg-green-100/60 rounded-xl px-4 py-3 text-center">
+          <div className="bg-green-100/50 rounded-xl px-4 py-3 text-center">
             <div className="text-base font-bold text-green-700">99.9% Uptime</div>
             <div className="text-xs text-green-900 mt-1">Reliable and always available</div>
           </div>
-          <div className="bg-purple-100/60 rounded-xl px-4 py-3 text-center">
-            <div className="text-base font-bold text-purple-700">50% Cost Savings</div>
-            <div className="text-xs text-purple-900 mt-1">Save on operations & IT</div>
+          <div className="bg-orange-100/50 rounded-xl px-4 py-3 text-center">
+            <div className="text-base font-bold text-orange-700">50% Cost Savings</div>
+            <div className="text-xs text-orange-900 mt-1">Save on operations & IT</div>
           </div>
         </div>
       </div>

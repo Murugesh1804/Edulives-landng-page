@@ -406,7 +406,7 @@ export default function FeaturesPage() {
                 {/* CTA */}
                 <div className="flex justify-center">
                   <Button 
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300"
+                    className="bg-gradient-to-br from-[#2563EB] via-[#059669] to-[#F59E0B] text-white font-semibold py-3 px-8 rounded-xl hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       closeModal()
                       window.location.href = '/#pricing'

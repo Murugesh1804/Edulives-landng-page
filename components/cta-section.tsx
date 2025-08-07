@@ -30,7 +30,7 @@ export function CTASection() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white px-12 py-6 text-lg font-semibold shadow-large hover:shadow-glow transition-all duration-300 group"
+              className="bg-gradient-to-br from-[#2563EB] via-[#059669] to-[#F59E0B] text-white px-12 py-6 text-lg font-semibold shadow-large hover:shadow-glow transition-all duration-300 group"
             >
               Start Free Trial
               <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
@@ -38,7 +38,7 @@ export function CTASection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white hover:text-blue-600 bg-white/10 backdrop-blur-sm px-12 py-6 text-lg font-semibold shadow-soft"
+              className="border-white/30 text-white hover:bg-gradient-to-br hover:from-[#2563EB] hover:via-[#059669] hover:to-[#F59E0B] hover:text-white bg-white/10 backdrop-blur-sm px-12 py-6 text-lg font-semibold shadow-soft"
             >
               Schedule Demo
             </Button>

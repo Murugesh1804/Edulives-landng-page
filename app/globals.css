@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +8,68 @@
     text-wrap: balance;
   }
   
+  /* Brand Color Utilities */
+  .text-brand-primary { color: #4285C6; }
+  .text-brand-secondary { color: #4CAF50; }
+  .text-brand-accent { color: #FBC02D; }
+  .text-brand-dark { color: #2D2D2D; }
+  .text-brand-mid { color: #424242; }
+  .text-brand-muted { color: #9E9E9E; }
+  
+  .bg-brand-primary { background-color: #4285C6; }
+  .bg-brand-secondary { background-color: #4CAF50; }
+  .bg-brand-accent { background-color: #FBC02D; }
+  .bg-brand-light { background-color: #FFFFFF; }
+  .bg-brand-dark { background-color: #2D2D2D; }
+  
+  .border-brand-primary { border-color: #4285C6; }
+  .border-brand-secondary { border-color: #4CAF50; }
+  .border-brand-accent { border-color: #FBC02D; }
+  .border-brand-divider { border-color: #E0E0E0; }
+  
+  /* Typography Hierarchy */
+  .text-display {
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .text-heading {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .text-subheading {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    line-height: 1.4;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .text-body-large {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .text-body {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .text-caption {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Modern Design Effects */
   .neumorphism {
     box-shadow: 
       20px 20px 60px #d1d5db,
@@ -40,7 +102,15 @@
   }
   
   .shadow-glow {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(59, 130, 246, 0.1);
+    box-shadow: 0 0 20px rgba(66, 133, 198, 0.3), 0 0 40px rgba(66, 133, 198, 0.1);
+  }
+
+  .shadow-glow-green {
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.3), 0 0 40px rgba(76, 175, 80, 0.1);
+  }
+
+  .shadow-glow-yellow {
+    box-shadow: 0 0 20px rgba(251, 192, 45, 0.3), 0 0 40px rgba(251, 192, 45, 0.1);
   }
 
   /* Animation utilities */
@@ -68,26 +138,138 @@
     animation: spin 8s linear infinite;
   }
   
-  /* Gradient text utilities */
-  .gradient-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Modern Card Styles */
+  .card-modern {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(224, 224, 224, 0.5);
+    transition: all 0.3s ease;
   }
   
-  .gradient-text-blue {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .card-modern:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
   }
   
-  .gradient-text-purple {
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Modern Button Styles */
+  .btn-primary {
+    background: #4CAF50;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+  }
+  
+  .btn-primary:hover {
+    background: #388E3C;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.4);
+  }
+  
+  .btn-secondary {
+    background: #4285C6;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(66, 133, 198, 0.3);
+  }
+  
+  .btn-secondary:hover {
+    background: #2E5A8A;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(66, 133, 198, 0.4);
+  }
+  
+  .btn-ghost {
+    background: transparent;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-ghost:hover {
+    background: rgba(76, 175, 80, 0.1);
+    transform: translateY(-1px);
+  }
+  
+  .btn-disabled {
+    background: #E0E0E0;
+    color: #9E9E9E;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: not-allowed;
+  }
+  
+  /* Modern Input Styles */
+  .input-modern {
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .input-modern:hover {
+    border-color: #4CAF50;
+    background: #FAFAFA;
+  }
+  
+  .input-modern:focus {
+    outline: none;
+    border-color: #4285C6;
+    box-shadow: 0 0 0 3px rgba(66, 133, 198, 0.1);
+  }
+  
+  .input-error {
+    border-color: #D32F2F;
+    background: #FFEBEE;
+  }
+  
+  /* Alert Styles */
+  .alert-success {
+    background: #E8F5E9;
+    color: #424242;
+    border: 1px solid #4CAF50;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  
+  .alert-info {
+    background: #E3F2FD;
+    color: #424242;
+    border: 1px solid #4285C6;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  
+  .alert-warning {
+    background: #FFF8E1;
+    color: #424242;
+    border: 1px solid #FBC02D;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  
+  .alert-error {
+    background: #FFEBEE;
+    color: #424242;
+    border: 1px solid #D32F2F;
+    border-radius: 12px;
+    padding: 16px;
   }
   
   /* Hover effects */
@@ -105,7 +287,7 @@
   }
   
   .hover-glow:hover {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 30px rgba(66, 133, 198, 0.3);
   }
   
   /* Background patterns */
@@ -118,37 +300,6 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
                       linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
-  }
-
-  /* Modern typography utilities */
-  .text-display {
-    font-size: clamp(3rem, 8vw, 8rem);
-    line-height: 1.1;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-  }
-
-  .text-heading {
-    font-size: clamp(2rem, 5vw, 4rem);
-    line-height: 1.2;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
-
-  .text-subheading {
-    font-size: clamp(1.25rem, 3vw, 2rem);
-    line-height: 1.4;
-    font-weight: 600;
-  }
-
-  .text-body-large {
-    font-size: clamp(1.125rem, 2vw, 1.5rem);
-    line-height: 1.6;
-  }
-
-  .text-body {
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    line-height: 1.6;
   }
 
   /* Modern spacing utilities */
@@ -179,122 +330,143 @@
   }
 
   .bg-gradient-primary {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
+    background: linear-gradient(135deg, #4285C6 0%, #4CAF50 100%);
   }
 
-  .bg-gradient-secondary {
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);
+  .bg-gradient-hero {
+    background: linear-gradient(160deg, #4285C6 0%, #4CAF50 100%);
   }
 
-  .bg-gradient-accent {
-    background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
-  }
-
-  /* Modern button styles */
-  .btn-modern {
-    @apply px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300;
-  }
-
-  .btn-primary {
-    @apply bg-gradient-primary text-white shadow-lg hover:shadow-xl hover:-translate-y-1;
-  }
-
-  .btn-secondary {
-    @apply bg-white border-2 border-neutral-200 text-neutral-700 shadow-soft hover:shadow-medium hover:-translate-y-1;
-  }
-
-  /* Modern card styles */
-  .card-modern {
-    @apply bg-white/95 backdrop-blur-lg rounded-3xl border border-neutral-200/50 shadow-soft hover:shadow-medium transition-all duration-300;
-  }
-
-  /* Modern input styles */
-  .input-modern {
-    @apply px-6 py-4 rounded-2xl border-2 border-neutral-200 bg-white/90 backdrop-blur-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300;
+  .bg-gradient-success {
+    background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%);
   }
 
   /* Modern navigation styles */
   .nav-modern {
-    @apply bg-white/90 backdrop-blur-lg border-b border-neutral-200/50 shadow-soft;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(224, 224, 224, 0.5);
+    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07);
   }
 
   /* Modern footer styles */
   .footer-modern {
-    @apply bg-neutral-900 text-white;
+    background: #2D2D2D;
+    color: #FFFFFF;
   }
 
   /* Modern section dividers */
   .divider-modern {
-    @apply h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #E0E0E0, transparent);
   }
 
   /* Modern list styles */
   .list-modern {
-    @apply space-y-4;
+    space-y: 1rem;
   }
 
   .list-item-modern {
-    @apply flex items-center space-x-3 text-lg text-neutral-600;
+    display: flex;
+    align-items: center;
+    space-x: 0.75rem;
+    font-size: 1.125rem;
+    color: #424242;
   }
 
   /* Modern badge styles */
   .badge-modern {
-    @apply px-4 py-2 rounded-xl text-sm font-semibold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
   }
 
   .badge-primary {
-    @apply bg-blue-100 text-blue-700;
+    background: rgba(66, 133, 198, 0.1);
+    color: #4285C6;
   }
 
   .badge-secondary {
-    @apply bg-purple-100 text-purple-700;
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
   }
 
-  .badge-success {
-    @apply bg-green-100 text-green-700;
-  }
-
-  .badge-warning {
-    @apply bg-orange-100 text-orange-700;
+  .badge-accent {
+    background: rgba(251, 192, 45, 0.1);
+    color: #FBC02D;
   }
 
   /* Modern progress bar */
   .progress-modern {
-    @apply w-full bg-neutral-200 rounded-full h-3 overflow-hidden;
+    width: 100%;
+    background: #E0E0E0;
+    border-radius: 0.75rem;
+    height: 0.75rem;
+    overflow: hidden;
   }
 
   .progress-fill {
-    @apply h-3 rounded-full transition-all duration-500;
+    height: 0.75rem;
+    border-radius: 0.75rem;
+    transition: all 0.5s ease;
   }
 
   /* Modern tooltip */
   .tooltip-modern {
-    @apply absolute z-50 px-4 py-2 text-sm text-white bg-neutral-900 rounded-xl shadow-lg opacity-0 pointer-events-none transition-opacity duration-300;
+    position: absolute;
+    z-index: 50;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: #FFFFFF;
+    background: #2D2D2D;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
   }
 
   .tooltip-modern::after {
     content: '';
-    @apply absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #2D2D2D;
   }
 
   /* Modern loading states */
   .loading-modern {
-    @apply animate-pulse bg-neutral-200 rounded-2xl;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    background: #E0E0E0;
+    border-radius: 1rem;
   }
 
   .skeleton-modern {
-    @apply bg-gradient-to-r from-neutral-200 via-neutral-100 to-neutral-200 bg-size-200 animate-pulse;
+    background: linear-gradient(90deg, #E0E0E0 25%, #F5F5F5 50%, #E0E0E0 75%);
+    background-size: 200% 100%;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   /* Modern focus states */
   .focus-modern {
-    @apply focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-offset-2;
+    outline: none;
+  }
+  
+  .focus-modern:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 133, 198, 0.2);
   }
 
   /* Modern scrollbar */
   .scrollbar-modern {
     scrollbar-width: thin;
-    scrollbar-color: #cbd5e1 #f1f5f9;
+    scrollbar-color: #E0E0E0 #F5F5F5;
   }
 
   .scrollbar-modern::-webkit-scrollbar {
@@ -302,17 +474,17 @@
   }
 
   .scrollbar-modern::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: #F5F5F5;
     border-radius: 4px;
   }
 
   .scrollbar-modern::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
+    background: #E0E0E0;
     border-radius: 4px;
   }
 
   .scrollbar-modern::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+    background: #BDBDBD;
   }
 }
 
@@ -444,32 +616,26 @@
   animation: gradient-shift 3s ease infinite;
 }
 
-/* Enhanced gradient text utilities */
-.gradient-text-primary {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #3b82f6 100%);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 3s ease infinite;
+/* Professional Education Background Patterns */
+.bg-education-dots {
+  background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
-.gradient-text-secondary {
-  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #8b5cf6 100%);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 4s ease infinite;
+.bg-education-grid {
+  background-image: linear-gradient(rgba(66, 133, 198, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(66, 133, 198, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
-.gradient-text-accent {
-  background: linear-gradient(135deg, #10b981 0%, #3b82f6 50%, #10b981 100%);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 5s ease infinite;
+.bg-education-lines {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(66, 133, 198, 0.05) 10px,
+    rgba(66, 133, 198, 0.05) 20px
+  );
 }
 
 @layer base {
@@ -508,23 +674,15 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
     
-    /* Custom colors for Fedana-inspired design */
-    --primary-blue: 221 83% 53%;
-    --primary-blue-light: 221 83% 63%;
-    --primary-blue-dark: 221 83% 43%;
-    --accent-purple: 262 83% 58%;
-    --accent-green: 142 76% 36%;
-    --accent-orange: 25 95% 53%;
-    --neutral-50: 0 0% 98%;
-    --neutral-100: 0 0% 96%;
-    --neutral-200: 0 0% 90%;
-    --neutral-300: 0 0% 83%;
-    --neutral-400: 0 0% 64%;
-    --neutral-500: 0 0% 45%;
-    --neutral-600: 0 0% 32%;
-    --neutral-700: 0 0% 25%;
-    --neutral-800: 0 0% 15%;
-    --neutral-900: 0 0% 9%;
+    /* Brand Color System */
+    --brand-primary: 221 83% 53%;      /* #4285C6 - Primary Blue */
+    --brand-secondary: 142 76% 36%;    /* #4CAF50 - Primary Green */
+    --brand-accent: 38 92% 50%;        /* #FBC02D - Warm Yellow */
+    --brand-light: 0 0% 100%;          /* #FFFFFF - Paper White */
+    --brand-dark: 0 0% 18%;            /* #2D2D2D - Charcoal */
+    --brand-mid: 0 0% 26%;             /* #424242 - Graphite */
+    --brand-muted: 0 0% 62%;           /* #9E9E9E - Steel Gray */
+    --brand-divider: 0 0% 88%;         /* #E0E0E0 - Fog Gray */
   }
   
   .dark {
@@ -574,13 +732,14 @@
   
   body {
     @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
+    font-family: 'Poppins', sans-serif;
   }
   
   h1 {
@@ -597,6 +756,7 @@
   
   p {
     @apply text-body leading-relaxed;
+    font-family: 'Inter', sans-serif;
   }
 
   /* Modern link styles */

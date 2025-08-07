@@ -5,24 +5,24 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        default: "bg-brand-primary text-white shadow-lg hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 active:translate-y-0",
+        secondary: "bg-brand-secondary text-white shadow-lg hover:bg-green-700 hover:shadow-xl hover:-translate-y-1 active:translate-y-0",
+        ghost: "bg-transparent text-brand-secondary border border-brand-secondary hover:bg-brand-secondary/10 hover:-translate-y-1 active:translate-y-0",
+        outline: "border border-brand-primary text-brand-primary bg-transparent hover:bg-brand-primary hover:text-white hover:-translate-y-1 active:translate-y-0",
+        destructive: "bg-destructive text-destructive-foreground shadow-lg hover:bg-destructive/90 hover:shadow-xl hover:-translate-y-1 active:translate-y-0",
+        success: "bg-gradient-success text-white shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0",
+        accent: "bg-brand-accent text-brand-dark shadow-lg hover:bg-yellow-600 hover:shadow-xl hover:-translate-y-1 active:translate-y-0",
+        gradient: "bg-gradient-primary text-white shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        default: "h-12 px-6 py-3 text-base",
+        sm: "h-9 rounded-lg px-3 text-sm",
+        lg: "h-14 rounded-2xl px-8 py-4 text-lg",
+        xl: "h-16 rounded-2xl px-10 py-5 text-xl",
         icon: "h-10 w-10",
       },
     },

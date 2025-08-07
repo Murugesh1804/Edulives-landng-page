@@ -155,7 +155,7 @@ export default function AboutPage() {
               </span>
               <a
                 href="/#get-started"
-                className="inline-flex items-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-green-500 text-white font-bold shadow-lg hover:scale-105 transition-transform"
+                className="inline-flex items-center px-6 py-3 rounded-xl bg-gradient-to-br from-[#2563EB] via-[#059669] to-[#F59E0B] text-white font-bold shadow-lg hover:scale-105 transition-transform"
               >
                 Get Started
               </a>

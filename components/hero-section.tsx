@@ -28,19 +28,6 @@ export function HeroSection() {
   return (
     <>
       <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        
-        .hero-container {
-          font-family: 'Inter', sans-serif;
-        }
-
-        .text-gradient-primary {
-          background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #059669 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
-
         .animated-text {
           display: inline-block;
           min-width: 320px;
@@ -109,30 +96,30 @@ export function HeroSection() {
         }
       `}</style>
 
-      <div className="hero-container">
-        <section className="relative min-h-screen bg-gradient-to-br from-neutral-50 via-white to-blue-50/30 overflow-hidden">
+      <div>
+        <section className="relative min-h-screen overflow-hidden">
           {/* Hero background image */}
           <div className="hero-bg-image" aria-hidden="true"></div>
-          {/* Optionally keep subtle background elements */}
+          {/* Background elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-blue-100/20 to-indigo-100/20 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-indigo-100/20 to-purple-100/20 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="pt-16 sm:pt-24 pb-10 sm:pb-16 text-center max-w-6xl mx-auto">
               {/* Trust Badge */}
-              <div className={`inline-flex items-center px-6 py-3 rounded-full bg-white/90 backdrop-blur-md border border-neutral-200/50 shadow-soft mb-12 ${isLoaded ? 'fade-in-up' : ''}`}>
+              <div className={`inline-flex items-center px-6 py-3 rounded-full card-modern mb-12 ${isLoaded ? 'fade-in-up' : ''}`}>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <Users className="w-5 h-5 text-blue-600" />
-                  <span className="text-lg font-semibold text-neutral-700">Trusted by 500+ schools nationwide</span>
+                  <div className="w-2 h-2 bg-brand-secondary rounded-full"></div>
+                  <Users className="w-5 h-5 text-brand-primary" />
+                  <span className="text-lg font-semibold text-brand-mid">Trusted by 500+ schools nationwide</span>
                 </div>
               </div>
 
               {/* Main Heading */}
               <div className="mb-12">
-                <h1 className="text-5.5xl sm:text-5xl lg:text-7xl font-extrabold text-neutral-900 leading-snug tracking-tight text-center">
+                <h1 className="text-display text-brand-dark leading-snug tracking-tight text-center">
                   <span className="block sm:inline transition-all duration-1000 ease-out"
                     style={{
                       opacity: isLoaded ? 1 : 0,
@@ -150,7 +137,7 @@ export function HeroSection() {
                     Seamless School&nbsp;
                   </span>
                   <span
-                    className="block sm:inline text-gradient-primary transition-all duration-1000 delay-300 ease-out"
+                    className="block sm:inline text-brand-primary transition-all duration-1000 delay-300 ease-out"
                     style={{
                       opacity: isLoaded ? 1 : 0,
                       transform: isLoaded ? 'translateY(0)' : 'translateY(-20px)'
@@ -161,11 +148,8 @@ export function HeroSection() {
                 </h1>
               </div>
 
-
-
-
               {/* Subtitle */}
-              <p className={`text-lg sm:text-2xl lg:text-3xl text-neutral-600 leading-relaxed mb-10 sm:mb-16 max-w-5xl mx-auto ${isLoaded ? 'fade-in-up' : ''}`}>
+              <p className={`text-body-large text-brand-mid leading-relaxed mb-10 sm:mb-16 max-w-5xl mx-auto ${isLoaded ? 'fade-in-up' : ''}`}>
                 Empower every role — students, teachers, HODs, and admins — with organized dashboards, 
                 real-time insights, and seamless coordination that transforms education.
               </p>
@@ -173,19 +157,17 @@ export function HeroSection() {
               {/* CTA Buttons */}
               <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-24 ${isLoaded ? 'fade-in-up' : ''}`}>
                 <Button
-                  size="lg"
-                  className="text-white px-12 py-8 text-xl font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-400 group border-0 hover-lift"
-                  style={{
-                    background: 'linear-gradient(90deg, #4285C5 0%, #34A853 100%)'
-                  }}
+                  size="xl"
+                  variant="gradient"
+                  className="group hover-lift"
                 >
                   View Dashboard Demo
                   <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
                 <Button 
-                  size="lg" 
+                  size="xl" 
                   variant="outline" 
-                  className="border-2 border-neutral-300 bg-white/90 backdrop-blur-sm hover:bg-white px-12 py-8 text-xl font-semibold rounded-2xl shadow-soft hover:shadow-lg transition-all duration-400 group hover-lift"
+                  className="border-2 border-brand-divider bg-white/90 backdrop-blur-sm hover:bg-white shadow-soft hover:shadow-lg hover-lift"
                 >
                   <Play className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                   Start Free Trial
@@ -194,9 +176,9 @@ export function HeroSection() {
 
               {/* Feature Stats */}
               <div
-                className={`rounded-2xl p-8 mb-24 border border-white/10 ${isLoaded ? 'fade-in-up' : ''}`}
+                className={`rounded-2xl p-8 mb-24 card-modern ${isLoaded ? 'fade-in-up' : ''}`}
                 style={{
-                  background: 'linear-gradient(135deg, #4285C5 0%, #34A853 100%)'
+                  background: 'linear-gradient(135deg, #4285C6 0%, #4CAF50 100%)'
                 }}
               >
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center justify-center">
@@ -243,61 +225,61 @@ export function HeroSection() {
             </div>
 
             {/* Dashboard Tour Video - inside a computer frame */}
-<div className={`pb-32 ${isLoaded ? 'fade-in-up' : ''}`}>
-  <div className="flex justify-center">
-    <div className="w-full max-w-screen-2xl flex flex-col items-center">
-      {/* Full Aspect Video (no laptop frame) */}
-      <div className="w-full flex justify-center px-4">
-        <div className="w-full max-w-6xl rounded-2xl overflow-hidden shadow-lg border border-blue-100 bg-white/80">
-          <video
-            className="w-full h-full aspect-video object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="/images/logo.jpg"
-            style={{ display: "block" }}
-          >
-            <source src="/Tour_lap.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
+            <div className={`pb-32 ${isLoaded ? 'fade-in-up' : ''}`}>
+              <div className="flex justify-center">
+                <div className="w-full max-w-screen-2xl flex flex-col items-center">
+                  {/* Full Aspect Video (no laptop frame) */}
+                  <div className="w-full flex justify-center px-4">
+                    <div className="w-full max-w-6xl rounded-2xl overflow-hidden shadow-lg border border-brand-divider bg-white/80 card-modern">
+                      <video
+                        className="w-full h-full aspect-video object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        poster="/images/logo.jpg"
+                        style={{ display: "block" }}
+                      >
+                        <source src="/Tour_lap.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
 
-      {/* Caption and Help Text */}
-      <div className="p-6 sm:p-10 md:p-16 text-center">
-        <h3 className="text-gradient-primary text-2xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-2 sm:mb-4 font-sans">
-          See the EduLives Dashboard in Action
-        </h3>
-        <p className="text-neutral-700 text-base sm:text-xl md:text-2xl font-medium font-sans">
-          Watch a quick tour of the all-in-one dashboard for students, teachers, and principals.
-        </p>
-        <div className="mt-4 sm:mt-6 text-sm sm:text-base text-neutral-500">
-          <span>
-            Having trouble viewing the video?{" "}
-            <a
-              href="/Tour-web.mp4"
-              download
-              className="text-blue-600 underline hover:text-blue-800"
-            >
-              Download the video
-            </a>
-            {" "}or{" "}
-            <a
-              href="https://get.adobe.com/flashplayer/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline hover:text-blue-800"
-            >
-              check your browser settings
-            </a>
-            .
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                  {/* Caption and Help Text */}
+                  <div className="p-6 sm:p-10 md:p-16 text-center">
+                    <h3 className="text-brand-primary text-2xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-2 sm:mb-4">
+                      See the EduLives Dashboard in Action
+                    </h3>
+                    <p className="text-brand-mid text-base sm:text-xl md:text-2xl font-medium">
+                      Watch a quick tour of the all-in-one dashboard for students, teachers, and principals.
+                    </p>
+                    <div className="mt-4 sm:mt-6 text-sm sm:text-base text-brand-muted">
+                      <span>
+                        Having trouble viewing the video?{" "}
+                        <a
+                          href="/Tour-web.mp4"
+                          download
+                          className="text-brand-primary underline hover:text-brand-primary/80"
+                        >
+                          Download the video
+                        </a>
+                        {" "}or{" "}
+                        <a
+                          href="https://get.adobe.com/flashplayer/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-brand-primary underline hover:text-brand-primary/80"
+                        >
+                          check your browser settings
+                        </a>
+                        .
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </section>

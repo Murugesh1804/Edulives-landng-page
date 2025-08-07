@@ -233,7 +233,7 @@ export default function ModernRolesDashboard() {
                 onClick={() => setActiveRole(role.id)}
                 className={`group relative px-8 py-4 rounded-2xl font-bold transition-all duration-300 ${
                   activeRole === role.id
-                    ? "bg-gradient-to-r from-blue-400 to-green-300 text-white shadow-xl scale-105"
+                    ? "bg-gradient-to-br from-[#2563EB] via-[#059669] to-[#F59E0B] text-white shadow-xl scale-105"
                     : "bg-white border border-gray-200 text-gray-700 hover:bg-blue-50"
                 }`}
                 whileHover={{ scale: 1.05 }}
@@ -247,7 +247,7 @@ export default function ModernRolesDashboard() {
                 {activeRole === role.id && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-gradient-to-r from-blue-400 to-green-300 rounded-2xl -z-10"
+                    className="absolute inset-0 bg-gradient-to-br from-[#2563EB] via-[#059669] to-[#F59E0B] rounded-2xl -z-10"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
