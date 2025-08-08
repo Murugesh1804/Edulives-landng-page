@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, Users } from "lucide-react"
+import { ArrowRight, Play, Users, Shield, Zap } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export function HeroSection() {
@@ -113,7 +113,7 @@ export function HeroSection() {
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-brand-secondary rounded-full"></div>
                   <Users className="w-5 h-5 text-brand-primary" />
-                  <span className="text-lg font-semibold text-brand-mid">Trusted by 500+ schools nationwide</span>
+                  <span className="text-lg font-semibold text-brand-mid">Privacy-first and role-based by design</span>
                 </div>
               </div>
 
@@ -154,27 +154,7 @@ export function HeroSection() {
                 real-time insights, and seamless coordination that transforms education.
               </p>
 
-              {/* CTA Buttons */}
-              <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-24 ${isLoaded ? 'fade-in-up' : ''}`}>
-                <Button
-                  size="xl"
-                  variant="gradient"
-                  className="group hover-lift"
-                >
-                  View Dashboard Demo
-                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
-                <Button 
-                  size="xl" 
-                  variant="outline" 
-                  className="border-2 border-brand-divider bg-white/90 backdrop-blur-sm hover:bg-white shadow-soft hover:shadow-lg hover-lift"
-                >
-                  <Play className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-                  Start Free Trial
-                </Button>
-              </div>
-
-              {/* Feature Stats */}
+              {/* Assurance Chips (replacing numeric stats) */}
               <div
                 className={`rounded-2xl p-8 mb-24 card-modern ${isLoaded ? 'fade-in-up' : ''}`}
                 style={{
@@ -182,43 +162,25 @@ export function HeroSection() {
                 }}
               >
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center justify-center">
-                  {/* Schools & Colleges */}
                   <div className="flex flex-col items-center text-center space-y-2">
                     <div className="w-12 h-12 flex items-center justify-center mb-2">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
+                      <Shield className="w-8 h-8 text-white" />
                     </div>
-                    <div>
-                      <div className="text-3xl font-bold text-white">40</div>
-                      <div className="text-sm text-white/80">Schools</div>
-                    </div>
+                    <div className="text-base font-semibold text-white">Privacy-first</div>
                   </div>
 
-                  {/* Countries */}
                   <div className="flex flex-col items-center text-center space-y-2">
                     <div className="w-12 h-12 flex items-center justify-center mb-2">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                      <Users className="w-8 h-8 text-white" />
                     </div>
-                    <div>
-                      <div className="text-3xl font-bold text-white">200+</div>
-                      <div className="text-sm text-white/80">Countries</div>
-                    </div>
+                    <div className="text-base font-semibold text-white">Role-based access</div>
                   </div>
 
-                  {/* Languages */}
                   <div className="flex flex-col items-center text-center space-y-2">
                     <div className="w-12 h-12 flex items-center justify-center mb-2">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                      </svg>
+                      <Zap className="w-8 h-8 text-white" />
                     </div>
-                    <div>
-                      <div className="text-3xl font-bold text-white">20+</div>
-                      <div className="text-sm text-white/80">Languages</div>
-                    </div>
+                    <div className="text-base font-semibold text-white">Fast, intuitive onboarding</div>
                   </div>
                 </div>
               </div>

@@ -112,15 +112,21 @@ export function MobileAppSection() {
                     
                     {/* App Content */}
                     <div className="p-4 space-y-4">
-                      {/* Quick Stats */}
+                      {/* Quick Stats (numeric removed) */}
                       <div className="grid grid-cols-2 gap-3">
                         <div className="card-modern p-3">
-                          <div className="text-2xl font-bold text-brand-primary">24</div>
-                          <div className="text-xs text-brand-muted">Classes Today</div>
+                          <div className="flex items-center justify-between">
+                            <div className="text-sm font-medium text-brand-dark">Classes</div>
+                            <span className="px-2 py-1 rounded-md bg-brand-primary/10 text-brand-primary text-xs">Updated</span>
+                          </div>
+                          <div className="text-xs text-brand-muted mt-1">Schedule synced</div>
                         </div>
                         <div className="card-modern p-3">
-                          <div className="text-2xl font-bold text-brand-secondary">156</div>
-                          <div className="text-xs text-brand-muted">Students</div>
+                          <div className="flex items-center justify-between">
+                            <div className="text-sm font-medium text-brand-dark">Students</div>
+                            <span className="px-2 py-1 rounded-md bg-brand-secondary/10 text-brand-secondary text-xs">Synced</span>
+                          </div>
+                          <div className="text-xs text-brand-muted mt-1">Roster up to date</div>
                         </div>
                       </div>
                       
@@ -243,7 +249,7 @@ export function MobileAppSection() {
               Ready to Go Mobile?
             </h3>
             <p className="text-brand-muted mb-4">
-              Join thousands of educators who trust EduLives mobile app for their daily school management needs.
+              Get started with a streamlined, modern workflow.
             </p>
             <Button variant="gradient" size="lg">
               Start Free Trial
