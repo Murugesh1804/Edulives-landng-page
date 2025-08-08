@@ -2,7 +2,7 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { CheckCircle, Users, Shield, Award } from "lucide-react"
+import { CheckCircle, Users, Shield, Award, BookOpen, MessageCircle, BarChart2, CalendarCheck, FileText } from "lucide-react"
 
 export default function AboutPage() {
   return (
@@ -55,22 +55,52 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Trust Metrics */}
-          <div className="flex flex-col md:flex-row justify-center gap-8 mb-20">
-            <div className="flex-1 flex flex-col items-center bg-white/80 rounded-2xl shadow-soft p-8 border border-neutral-200/50">
-              <Users className="w-8 h-8 text-blue-500 mb-2" />
-              <div className="text-3xl font-bold text-neutral-900">500+</div>
-              <div className="text-neutral-600 mt-1">Schools Trust Us</div>
-            </div>
-            <div className="flex-1 flex flex-col items-center bg-white/80 rounded-2xl shadow-soft p-8 border border-neutral-200/50">
-              <Award className="w-8 h-8 text-yellow-500 mb-2" />
-              <div className="text-3xl font-bold text-neutral-900">4.9/5</div>
-              <div className="text-neutral-600 mt-1">Average Rating</div>
-            </div>
-            <div className="flex-1 flex flex-col items-center bg-white/80 rounded-2xl shadow-soft p-8 border border-neutral-200/50">
-              <Shield className="w-8 h-8 text-green-500 mb-2" />
-              <div className="text-3xl font-bold text-neutral-900">99.9%</div>
-              <div className="text-neutral-600 mt-1">Uptime Guarantee</div>
+          {/* Key Features */}
+          <div className="max-w-5xl mx-auto mb-20">
+            <h2 className="text-3xl font-bold text-neutral-900 mb-8 text-center">Platform Features</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white/90 rounded-2xl shadow-soft p-8 border border-neutral-200/50 flex flex-col items-center">
+                <BookOpen className="w-8 h-8 text-blue-500 mb-3" />
+                <h3 className="text-xl font-semibold text-neutral-900 mb-2">Academic Management</h3>
+                <p className="text-neutral-600 text-center">
+                  Effortlessly manage classes, subjects, timetables, and assignments in one place.
+                </p>
+              </div>
+              <div className="bg-white/90 rounded-2xl shadow-soft p-8 border border-neutral-200/50 flex flex-col items-center">
+                <MessageCircle className="w-8 h-8 text-green-500 mb-3" />
+                <h3 className="text-xl font-semibold text-neutral-900 mb-2">Communication Hub</h3>
+                <p className="text-neutral-600 text-center">
+                  Instantly connect students, teachers, and parents with announcements, chat, and notifications.
+                </p>
+              </div>
+              <div className="bg-white/90 rounded-2xl shadow-soft p-8 border border-neutral-200/50 flex flex-col items-center">
+                <BarChart2 className="w-8 h-8 text-purple-500 mb-3" />
+                <h3 className="text-xl font-semibold text-neutral-900 mb-2">Analytics & Insights</h3>
+                <p className="text-neutral-600 text-center">
+                  Gain real-time insights into attendance, performance, and engagement with smart dashboards.
+                </p>
+              </div>
+              <div className="bg-white/90 rounded-2xl shadow-soft p-8 border border-neutral-200/50 flex flex-col items-center">
+                <CalendarCheck className="w-8 h-8 text-yellow-500 mb-3" />
+                <h3 className="text-xl font-semibold text-neutral-900 mb-2">Attendance & Scheduling</h3>
+                <p className="text-neutral-600 text-center">
+                  Track attendance, manage calendars, and automate reminders for important events.
+                </p>
+              </div>
+              <div className="bg-white/90 rounded-2xl shadow-soft p-8 border border-neutral-200/50 flex flex-col items-center">
+                <FileText className="w-8 h-8 text-red-500 mb-3" />
+                <h3 className="text-xl font-semibold text-neutral-900 mb-2">Document Management</h3>
+                <p className="text-neutral-600 text-center">
+                  Securely store, share, and access academic records, certificates, and circulars.
+                </p>
+              </div>
+              <div className="bg-white/90 rounded-2xl shadow-soft p-8 border border-neutral-200/50 flex flex-col items-center">
+                <Shield className="w-8 h-8 text-teal-500 mb-3" />
+                <h3 className="text-xl font-semibold text-neutral-900 mb-2">Privacy & Security</h3>
+                <p className="text-neutral-600 text-center">
+                  Enterprise-grade security and privacy-first design to protect your data and community.
+                </p>
+              </div>
             </div>
           </div>
 
