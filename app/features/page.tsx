@@ -247,15 +247,15 @@ export default function FeaturesPage() {
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-dots opacity-5"></div>
         
-        <div className="container mx-auto container-padding pt-32 pb-20">
+        <div className="container mx-auto container-padding" style={{ paddingTop: "4rem", paddingBottom: "5rem" }}>
           <motion.div 
-            className="text-center max-w-4xl mx-auto"
+            className="text-center max-w-1xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <motion.h1 
-              className="text-display font-bold mb-6"
+              className="text-display mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
